@@ -1,0 +1,118 @@
+---
+title: "Process Sexuality IAT"
+author: "Seungju Kim"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+# Prepare
+## Load Packages
+```{r}
+pacman::p_load(tidyverse, here, readr, haven)
+```
+
+## Import all data
+```{r}
+folder_path <- here("raw_data", "sexuality")
+
+# Read all CSVs
+csv_files <- list.files(folder_path, pattern = "\\.csv$", 
+                        full.names = TRUE, recursive = TRUE)
+
+csv_data <- csv_files |>
+  set_names(basename) |>
+  map(read_csv)
+
+# Read all SAV files
+sav_files <- list.files(folder_path, pattern = "\\.sav$", 
+                        full.names = TRUE, recursive = TRUE)
+
+sav_data <- sav_files |>
+  set_names(basename) |>
+  map(read_sav)
+
+# Combine into one named list
+all_files <- c(csv_data, sav_data)
+names(all_files) <- tools::file_path_sans_ext(names(all_files))
+```
+
+# Examine Data
+```{r}
+state_props <- sex_2025 |>
+  filter(!is.na(STATE)) |>
+  count(STATE) |>
+  mutate(
+    proportion = n / sum(n),
+    percent = round(proportion * 100, 2)
+  ) |>
+  arrange(desc(n))
+
+state_props
+```
+
+```{r}
+sex_2025 |>
+  filter(!is.na(STATE), !is.na(D_biep.Straight_Good_all)) |>
+  group_by(STATE) |>
+  summarise(
+    n = n(),
+    mean_IAT = round(mean(D_biep.Straight_Good_all), 3),
+    sd_IAT = round(sd(D_biep.Straight_Good_all), 3),
+    median_IAT = round(median(D_biep.Straight_Good_all), 3),
+    min_IAT = round(min(D_biep.Straight_Good_all), 3),
+    max_IAT = round(max(D_biep.Straight_Good_all), 3)
+  ) |>
+  arrange(desc(n)) |>
+  slice_head(n = 5)
+```
+
+```{r}
+top5_states <- sex_2025 |>
+  filter(!is.na(STATE), !is.na(D_biep.Straight_Good_all)) |>
+  count(STATE) |>
+  arrange(desc(n)) |>
+  slice() |>
+  pull(STATE)
+
+sex_2025 |>
+  filter(STATE %in% top5_states, !is.na(D_biep.Straight_Good_all)) |>
+  ggplot(aes(x = D_biep.Straight_Good_all, fill = STATE)) +
+  geom_histogram(bins = 30, color = "white", alpha = 0.8) +
+  facet_wrap(~ STATE, ncol = 1) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray30") +
+  labs(
+    title = "Distribution of Sexuality IAT Scores by State",
+    subtitle = "Top 5 most represented states; D > 0 = implicit preference for straight",
+    x = "IAT D-score (Straight = Good)",
+    y = "Count",
+    fill = "State"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+# Create Data
+```{r}
+master_sex_data <- data.frame(
+  year = numeric(),
+  state = character(),
+  mean_IAT = numeric(),
+  stringsAsFactors = FALSE
+)
+```
+
+# Create Master Clean Dataset
+
+```{r}
+master_sex_data <- all_files |>
+  map_dfr(~ .x |>
+    filter(!is.na(STATE), !is.na(D_biep.Straight_Good_all)) |>
+    group_by(year, STATE) |>
+    summarise(mean_IAT = mean(D_biep.Straight_Good_all), .groups = "drop")
+  ) |>
+  rename(state = STATE)
+
+saveRDS(master_sex_data, here("data", "sexuality_030926.Rds"))
+```
+
