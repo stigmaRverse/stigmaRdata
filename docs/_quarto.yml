@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: ../../docs_site
+  output-dir: _book
 
 book:
   title: "stigmaRdata: Data Processing Documentation"  # main page title
