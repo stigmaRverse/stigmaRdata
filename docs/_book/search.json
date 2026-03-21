@@ -1,0 +1,152 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "stigmaRdata: Data Processing Documentation",
+    "section": "",
+    "text": "Overview\nThis book documents the data sources, cleaning procedures, and methodological decisions underlying the stigmaR R package.\nstigmaR measures structural stigma — the societal-level conditions that disadvantage stigmatized groups — for use in health disparities research. The data pipeline documented here transforms raw public data into the structured indicators that stigmaR exposes to researchers.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#who-this-is-for",
+    "href": "index.html#who-this-is-for",
+    "title": "stigmaRdata: Data Processing Documentation",
+    "section": "Who This Is For",
+    "text": "Who This Is For\nThis documentation is intended for:\n\nResearchers who want to understand how stigmaR indicators are constructed before using them in analysis\nReviewers and collaborators who need methodological transparency\nFuture contributors (including future me) who need to maintain or extend the pipeline",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#data-sources",
+    "href": "index.html#data-sources",
+    "title": "stigmaRdata: Data Processing Documentation",
+    "section": "Data Sources",
+    "text": "Data Sources\n\n\n\n\n\n\n\n\nSource\nCoverage\nIndicators\n\n\n\n\nMovement Advancement Project (MAP)\n2010–present\nPolicy environment scores\n\n\nProject Implicit (IAT)\n2006–present\nImplicit bias by state",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-read-this-book",
+    "href": "index.html#how-to-read-this-book",
+    "title": "stigmaRdata: Data Processing Documentation",
+    "section": "How to Read This Book",
+    "text": "How to Read This Book\nEach chapter covers one data source and follows a consistent structure:\n\nSource description — what it is and where it comes from\nAccess and download — how raw data is obtained\nCleaning decisions — variable selection, exclusions, recoding\nLimitations — known issues and caveats\nOutput — what the final dataset looks like",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#versioning-and-changelog",
+    "href": "index.html#versioning-and-changelog",
+    "title": "stigmaRdata: Data Processing Documentation",
+    "section": "Versioning and Changelog",
+    "text": "Versioning and Changelog\nData pipelines and coding decisions evolve over time. See the Changelog for a record of substantive changes across versions of stigmaRdata.\nCurrent version: 0.1.0\nLast updated: r Sys.Date()",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#citation",
+    "href": "index.html#citation",
+    "title": "stigmaRdata: Data Processing Documentation",
+    "section": "Citation",
+    "text": "Citation\nIf you use stigmaR in published research, please cite:\n\nKim, S. (2028). stigmaR: Structural stigma measures for health disparities research. R package version x.x.x.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "stigmaRdata: Data Processing Documentation",
+    "section": "Contact",
+    "text": "Contact\nQuestions about the data pipeline can be filed as a GitHub Issue in the main stigmaR repository.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "01_map.html",
+    "href": "01_map.html",
+    "title": "1  Movement Advancement Project",
+    "section": "",
+    "text": "1.1 Source Description\nFull name: Movement Advancement Project Policy Tally\nWebsite: https://www.mapresearch.org\nData type: Administrative/policy tracking\nUnit of analysis: State-year\nCoverage: 50 U.S. states + D.C. + territories, 2010–present",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "01_map.html#source-description",
+    "href": "01_map.html#source-description",
+    "title": "1  Movement Advancement Project",
+    "section": "",
+    "text": "1.1.1 About the Original Data\nBriefly describe what this dataset is and who collects it. What is the construct it’s measuring? Why is it relevant as a structural stigma indicator?\n\n\n1.1.2 Original Data Collection\n\n\n\nFeature\nDetails\n\n\n\n\nCollection method\nPolicy tracking / expert coding\n\n\nSampling frame\nAll U.S. states and territories\n\n\nSample type\nCensus (not a sample)\n\n\nUpdate frequency\nAnnual\n\n\nGeographic coverage\nState-level\n\n\nTemporal coverage\n2010–present\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote any important caveats about how the original investigators collected or coded this data.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "01_map.html#access-and-download",
+    "href": "01_map.html#access-and-download",
+    "title": "1  Movement Advancement Project",
+    "section": "1.2 Access and Download",
+    "text": "1.2 Access and Download\n\n1.2.1 How to Access\nDescribe where and how to obtain the raw data. Is it publicly available? Does it require registration? Is it scraped, downloaded, or accessed via API?\n\n\n\nFeature\nDetails\n\n\n\n\nAccess type\nPublic download / API / web scrape / request\n\n\nURL\nhttps://…\n\n\nAuthentication required\nYes/No\n\n\nCost\nFree / paid\n\n\nLast accessed\nr Sys.Date()\n\n\n\n\n\n1.2.2 Download Procedure\nStep-by-step description of how we obtained the data. Be specific enough that someone could reproduce this in 5 years when the website has changed.\n# Any download code goes here\n\n\n\n\n\n\nWarning\n\n\n\nNote any known instability in access (e.g., website changes, file format shifts across years).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "01_map.html#cleaning-procedure",
+    "href": "01_map.html#cleaning-procedure",
+    "title": "1  Movement Advancement Project",
+    "section": "1.3 Cleaning Procedure",
+    "text": "1.3 Cleaning Procedure\n\n1.3.1 Raw Data Structure\nDescribe what the raw data looks like before any processing.\n\nFile format: .csv / .xlsx / .txt / .pdf\n\nRows: One row per [state / state-year / indicator]\n\nKey variables: List the main variables used\n\n\n\n1.3.2 Cleaning Steps\nDescribe each substantive cleaning decision in order. For each decision, explain both what was done and why.\n\n1.3.2.1 1. [Step name, e.g., Variable Selection]\nWhat variables were retained and why. What was excluded and why.\n# Relevant code\n\n\n1.3.2.2 2. [Step name, e.g., Handling Missing Data]\nHow missing values were identified and treated.\n# Relevant code\n\n\n1.3.2.3 3. [Step name, e.g., Recoding / Scoring]\nAny recoding, reverse scoring, or composite construction.\n# Relevant code\n\n\n\n\n\n\nImportant\n\n\n\nDocument any decisions that involve judgment calls — these are the decisions future you (or a reviewer) will ask about.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "01_map.html#aggregation-to-state-level",
+    "href": "01_map.html#aggregation-to-state-level",
+    "title": "1  Movement Advancement Project",
+    "section": "1.4 Aggregation to State Level",
+    "text": "1.4 Aggregation to State Level\n\n\n\n\n\n\nNote\n\n\n\nSkip this section if the data is already state-level (e.g., MAP).\n\n\n\n1.4.1 Unit of Analysis in Raw Data\nWhat is the original unit? (e.g., individual respondent, county, zip code)\n\n\n1.4.2 Aggregation Method\n\n\n\nFeature\nDecision\nRationale\n\n\n\n\nStatistic\nMean / Median / Sum\nWhy this statistic\n\n\nMinimum n\ne.g., n ≥ 50 per state\nWhy this threshold\n\n\nWeighting\nUnweighted / survey-weighted\nWhy\n\n\nMissing states\nExcluded / imputed\nWhy\n\n\n\n# Aggregation code\n\n\n1.4.3 Sensitivity Checks\nNote any alternative aggregation approaches considered and why the chosen approach was preferred.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "01_map.html#output-dataset",
+    "href": "01_map.html#output-dataset",
+    "title": "1  Movement Advancement Project",
+    "section": "1.5 Output Dataset",
+    "text": "1.5 Output Dataset\n\n1.5.1 Variables in Final Output\n\n\n\nVariable\nType\nDescription\nRange\n\n\n\n\nstate\nchr\nTwo-letter state abbreviation\n—\n\n\nyear\nint\nCalendar year\n2010–2024\n\n\nmap_so_total\ndbl\nSexual orientation policy tally\n-10 to 20\n\n\nmap_gi_total\ndbl\nGender identity policy tally\n-10 to 20.5\n\n\n\n\n\n1.5.2 Output File\n# Final save\nsaveRDS(map_clean, here(\"data\", \"clean\", \"map\", \"map_clean.rds\"))\nFile location: data/clean/map/map_clean.rds\nRows: 51 (states + D.C.) × years available\nLast generated: r Sys.Date()",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "01_map.html#known-limitations",
+    "href": "01_map.html#known-limitations",
+    "title": "1  Movement Advancement Project",
+    "section": "1.6 Known Limitations",
+    "text": "1.6 Known Limitations\n\nLimitation 1 and its implications for use\nLimitation 2\nAny known errors or inconsistencies in the source data",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "01_map.html#references",
+    "href": "01_map.html#references",
+    "title": "1  Movement Advancement Project",
+    "section": "1.7 References",
+    "text": "1.7 References\nList any papers, reports, or documentation from the original data collectors that should be cited when using this source.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  }
+]

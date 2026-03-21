@@ -14,3 +14,12 @@ book:
   chapters:
     - index.qmd
     - 01_map.qmd
+
+
+format:
+  html:
+    theme:
+      light:
+      - flatly
+      dark:
+      - darkly
