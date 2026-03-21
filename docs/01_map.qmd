@@ -5,9 +5,11 @@ author:
     orcid: 0009-0009-5166-9170
     email: seungju7@illinois.edu
     affiliation: 
-      - name: University of Illinois, Urbana-Champaign
+      - name: University of Illinois at Urbana-Champaign
         department: Psychology
-format: html
+format: 
+  html:
+    embed-resources: true
 execute:
   eval: false
   echo: true

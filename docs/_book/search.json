@@ -74,7 +74,7 @@
     "href": "01_map.html",
     "title": "1  Movement Advancement Project",
     "section": "",
-    "text": "1.1 Source Description\nFull name: Movement Advancement Project Policy Tally\nWebsite: https://www.mapresearch.org\nData type: Administrative/policy tracking\nUnit of analysis: State-year\nCoverage: 50 U.S. states + D.C. + territories, 2010–present",
+    "text": "Source Description\nFull name: Movement Advancement Project Policy Tally\nWebsite: https://www.mapresearch.org\nData type: Administrative/policy tracking\nUnit of analysis: State-year\nCoverage: 50 U.S. states + D.C. + territories, 2010–present",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "01_map.html#source-description",
     "title": "1  Movement Advancement Project",
     "section": "",
-    "text": "1.1.1 About the Original Data\nBriefly describe what this dataset is and who collects it. What is the construct it’s measuring? Why is it relevant as a structural stigma indicator?\n\n\n1.1.2 Original Data Collection\n\n\n\nFeature\nDetails\n\n\n\n\nCollection method\nPolicy tracking / expert coding\n\n\nSampling frame\nAll U.S. states and territories\n\n\nSample type\nCensus (not a sample)\n\n\nUpdate frequency\nAnnual\n\n\nGeographic coverage\nState-level\n\n\nTemporal coverage\n2010–present\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote any important caveats about how the original investigators collected or coded this data.",
+    "text": "About the Original Data\nBriefly describe what this dataset is and who collects it. What is the construct it’s measuring? Why is it relevant as a structural stigma indicator?\n\n\nOriginal Data Collection\n\n\n\nFeature\nDetails\n\n\n\n\nCollection method\nPolicy tracking / expert coding\n\n\nSampling frame\nAll U.S. states and territories\n\n\nSample type\nCensus (not a sample)\n\n\nUpdate frequency\nAnnual\n\n\nGeographic coverage\nState-level\n\n\nTemporal coverage\n2010–present\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote any important caveats about how the original investigators collected or coded this data.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
     ]
@@ -93,8 +93,8 @@
     "objectID": "01_map.html#access-and-download",
     "href": "01_map.html#access-and-download",
     "title": "1  Movement Advancement Project",
-    "section": "1.2 Access and Download",
-    "text": "1.2 Access and Download\n\n1.2.1 How to Access\nDescribe where and how to obtain the raw data. Is it publicly available? Does it require registration? Is it scraped, downloaded, or accessed via API?\n\n\n\nFeature\nDetails\n\n\n\n\nAccess type\nPublic download / API / web scrape / request\n\n\nURL\nhttps://…\n\n\nAuthentication required\nYes/No\n\n\nCost\nFree / paid\n\n\nLast accessed\nr Sys.Date()\n\n\n\n\n\n1.2.2 Download Procedure\nStep-by-step description of how we obtained the data. Be specific enough that someone could reproduce this in 5 years when the website has changed.\n# Any download code goes here\n\n\n\n\n\n\nWarning\n\n\n\nNote any known instability in access (e.g., website changes, file format shifts across years).",
+    "section": "Access and Download",
+    "text": "Access and Download\n\nHow to Access\nDescribe where and how to obtain the raw data. Is it publicly available? Does it require registration? Is it scraped, downloaded, or accessed via API?\n\n\n\nFeature\nDetails\n\n\n\n\nAccess type\nPublic download / API / web scrape / request\n\n\nURL\nhttps://…\n\n\nAuthentication required\nYes/No\n\n\nCost\nFree / paid\n\n\nLast accessed\nr Sys.Date()\n\n\n\n\n\nDownload Procedure\nStep-by-step description of how we obtained the data. Be specific enough that someone could reproduce this in 5 years when the website has changed.\n# Any download code goes here\n\n\n\n\n\n\nWarning\n\n\n\nNote any known instability in access (e.g., website changes, file format shifts across years).",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
     ]
@@ -103,8 +103,8 @@
     "objectID": "01_map.html#cleaning-procedure",
     "href": "01_map.html#cleaning-procedure",
     "title": "1  Movement Advancement Project",
-    "section": "1.3 Cleaning Procedure",
-    "text": "1.3 Cleaning Procedure\n\n1.3.1 Raw Data Structure\nDescribe what the raw data looks like before any processing.\n\nFile format: .csv / .xlsx / .txt / .pdf\n\nRows: One row per [state / state-year / indicator]\n\nKey variables: List the main variables used\n\n\n\n1.3.2 Cleaning Steps\nDescribe each substantive cleaning decision in order. For each decision, explain both what was done and why.\n\n1.3.2.1 1. [Step name, e.g., Variable Selection]\nWhat variables were retained and why. What was excluded and why.\n# Relevant code\n\n\n1.3.2.2 2. [Step name, e.g., Handling Missing Data]\nHow missing values were identified and treated.\n# Relevant code\n\n\n1.3.2.3 3. [Step name, e.g., Recoding / Scoring]\nAny recoding, reverse scoring, or composite construction.\n# Relevant code\n\n\n\n\n\n\nImportant\n\n\n\nDocument any decisions that involve judgment calls — these are the decisions future you (or a reviewer) will ask about.",
+    "section": "Cleaning Procedure",
+    "text": "Cleaning Procedure\n\nRaw Data Structure\nDescribe what the raw data looks like before any processing.\n\nFile format: .csv / .xlsx / .txt / .pdf\n\nRows: One row per [state / state-year / indicator]\n\nKey variables: List the main variables used\n\n\n\nCleaning Steps\nDescribe each substantive cleaning decision in order. For each decision, explain both what was done and why.\n\n1. [Step name, e.g., Variable Selection]\nWhat variables were retained and why. What was excluded and why.\n# Relevant code\n\n\n2. [Step name, e.g., Handling Missing Data]\nHow missing values were identified and treated.\n# Relevant code\n\n\n3. [Step name, e.g., Recoding / Scoring]\nAny recoding, reverse scoring, or composite construction.\n# Relevant code\n\n\n\n\n\n\nImportant\n\n\n\nDocument any decisions that involve judgment calls — these are the decisions future you (or a reviewer) will ask about.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
     ]
@@ -113,8 +113,8 @@
     "objectID": "01_map.html#aggregation-to-state-level",
     "href": "01_map.html#aggregation-to-state-level",
     "title": "1  Movement Advancement Project",
-    "section": "1.4 Aggregation to State Level",
-    "text": "1.4 Aggregation to State Level\n\n\n\n\n\n\nNote\n\n\n\nSkip this section if the data is already state-level (e.g., MAP).\n\n\n\n1.4.1 Unit of Analysis in Raw Data\nWhat is the original unit? (e.g., individual respondent, county, zip code)\n\n\n1.4.2 Aggregation Method\n\n\n\nFeature\nDecision\nRationale\n\n\n\n\nStatistic\nMean / Median / Sum\nWhy this statistic\n\n\nMinimum n\ne.g., n ≥ 50 per state\nWhy this threshold\n\n\nWeighting\nUnweighted / survey-weighted\nWhy\n\n\nMissing states\nExcluded / imputed\nWhy\n\n\n\n# Aggregation code\n\n\n1.4.3 Sensitivity Checks\nNote any alternative aggregation approaches considered and why the chosen approach was preferred.",
+    "section": "Aggregation to State Level",
+    "text": "Aggregation to State Level\n\n\n\n\n\n\nNote\n\n\n\nSkip this section if the data is already state-level (e.g., MAP).\n\n\n\nUnit of Analysis in Raw Data\nWhat is the original unit? (e.g., individual respondent, county, zip code)\n\n\nAggregation Method\n\n\n\nFeature\nDecision\nRationale\n\n\n\n\nStatistic\nMean / Median / Sum\nWhy this statistic\n\n\nMinimum n\ne.g., n ≥ 50 per state\nWhy this threshold\n\n\nWeighting\nUnweighted / survey-weighted\nWhy\n\n\nMissing states\nExcluded / imputed\nWhy\n\n\n\n# Aggregation code\n\n\nSensitivity Checks\nNote any alternative aggregation approaches considered and why the chosen approach was preferred.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
     ]
@@ -123,8 +123,8 @@
     "objectID": "01_map.html#output-dataset",
     "href": "01_map.html#output-dataset",
     "title": "1  Movement Advancement Project",
-    "section": "1.5 Output Dataset",
-    "text": "1.5 Output Dataset\n\n1.5.1 Variables in Final Output\n\n\n\nVariable\nType\nDescription\nRange\n\n\n\n\nstate\nchr\nTwo-letter state abbreviation\n—\n\n\nyear\nint\nCalendar year\n2010–2024\n\n\nmap_so_total\ndbl\nSexual orientation policy tally\n-10 to 20\n\n\nmap_gi_total\ndbl\nGender identity policy tally\n-10 to 20.5\n\n\n\n\n\n1.5.2 Output File\n# Final save\nsaveRDS(map_clean, here(\"data\", \"clean\", \"map\", \"map_clean.rds\"))\nFile location: data/clean/map/map_clean.rds\nRows: 51 (states + D.C.) × years available\nLast generated: r Sys.Date()",
+    "section": "Output Dataset",
+    "text": "Output Dataset\n\nVariables in Final Output\n\n\n\nVariable\nType\nDescription\nRange\n\n\n\n\nstate\nchr\nTwo-letter state abbreviation\n—\n\n\nyear\nint\nCalendar year\n2010–2024\n\n\nmap_so_total\ndbl\nSexual orientation policy tally\n-10 to 20\n\n\nmap_gi_total\ndbl\nGender identity policy tally\n-10 to 20.5\n\n\n\n\n\nOutput File\n# Final save\nsaveRDS(map_clean, here(\"data\", \"clean\", \"map\", \"map_clean.rds\"))\nFile location: data/clean/map/map_clean.rds\nRows: 51 (states + D.C.) × years available\nLast generated: r Sys.Date()",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
     ]
@@ -133,8 +133,8 @@
     "objectID": "01_map.html#known-limitations",
     "href": "01_map.html#known-limitations",
     "title": "1  Movement Advancement Project",
-    "section": "1.6 Known Limitations",
-    "text": "1.6 Known Limitations\n\nLimitation 1 and its implications for use\nLimitation 2\nAny known errors or inconsistencies in the source data",
+    "section": "Known Limitations",
+    "text": "Known Limitations\n\nLimitation 1 and its implications for use\nLimitation 2\nAny known errors or inconsistencies in the source data",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
     ]
@@ -143,10 +143,90 @@
     "objectID": "01_map.html#references",
     "href": "01_map.html#references",
     "title": "1  Movement Advancement Project",
-    "section": "1.7 References",
-    "text": "1.7 References\nList any papers, reports, or documentation from the original data collectors that should be cited when using this source.",
+    "section": "References",
+    "text": "References\nList any papers, reports, or documentation from the original data collectors that should be cited when using this source.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Movement Advancement Project</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html",
+    "href": "02_iat_sexuality.html",
+    "title": "2  IAT: Sexuality",
+    "section": "",
+    "text": "Source Description\nFull name: Implicit Association Test - Sexuality\nWebsite: Harvard Project Implicit\nData type: Survey\nUnit of analysis: State\nGeographic Coverage: 50 U.S. states + D.C.\nTemporal Coverage: 2010-2025",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html#source-description",
+    "href": "02_iat_sexuality.html#source-description",
+    "title": "2  IAT: Sexuality",
+    "section": "",
+    "text": "About the Original Data\nProject Implicit (housed within Harvard University) is a web-based platform that allows users to Implicit associations and explicit attitudes towards sexuality.\nData collection for sexuality has been ongoing since 2004 (as of 2026) using non-probability sample of volunteer participants who visit the website through search engines, social media, or as part of school or work.\n\n\n\n\n\n\nWarning\n\n\n\nResearchers should be aware of one significant limitation surrounding the use of implicit associations for sexuality: it only measures implicit associations between good and bad for gay men.\nThis means the implicit associations test may not hold meaningful implications for lesbian, bi/pansexual, or otherwise sexually diverse individuals.\n\n\n\n\nOriginal Data Collection\n\n\n\n\n\n\n\nFeature\nDetails\n\n\n\n\nCollection method\nBLANK (e.g., Policy tracking, Online survey, Phone survey)\n\n\nSampling frame\nBLANK (e.g., All U.S. states, U.S. adult internet users)\n\n\nSample type\nBLANK (e.g., Census, Probability, Convenience)\n\n\nUpdate frequency\nBLANK (e.g., Annual, Continuous)\n\n\nGeographic coverage\nBLANK (e.g., State-level, National)\n\n\nTemporal coverage\nBLANK–present\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nBLANK: Note any important caveats about how the original investigators collected or coded this data.\n\n\n\n\nRequired Citation\nIf you use this indicator in published research, you must cite the original data source in addition to the stigmaR package:\n\nBLANK: Full citation for original data source here.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html#access-and-download",
+    "href": "02_iat_sexuality.html#access-and-download",
+    "title": "2  IAT: Sexuality",
+    "section": "Access and Download",
+    "text": "Access and Download\n\n\n\nFeature\nDetails\n\n\n\n\nAccess type\nBLANK (e.g., Public download, Registration required, Request)\n\n\nURL\nBLANK\n\n\nAuthentication required\nBLANK (Yes/No)\n\n\nCost\nBLANK (Free/Paid)\n\n\nLast accessed\nBLANK (Month Year)\n\n\n\n\nDownload Procedure\nBLANK: Step-by-step description of how the data was obtained. Be specific enough that someone could reproduce this in 5 years if the website changes.\n# BLANK: Download code here\n\n\n\n\n\n\nWarning\n\n\n\nBLANK: Note any known instability in access (e.g., website changes, file format shifts across years). Delete this block if not applicable.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html#cleaning-procedure",
+    "href": "02_iat_sexuality.html#cleaning-procedure",
+    "title": "2  IAT: Sexuality",
+    "section": "Cleaning Procedure",
+    "text": "Cleaning Procedure\n\nRaw Data Structure\n\nFile format: BLANK (e.g., .csv, .xlsx, .sav)\n\nRows: BLANK (e.g., One row per state-year, One row per respondent)\n\nKey variables used: BLANK\n\n\n\nCleaning Steps\n\n1. BLANK (e.g., Variable Selection)\nBLANK: What variables were retained and why. What was excluded and why.\n# BLANK\n\n\n2. BLANK (e.g., Exclusion Criteria)\nBLANK: What cases/rows were excluded and why.\n# BLANK\n\n\n3. BLANK (e.g., Recoding / Scoring)\nBLANK: Any recoding, reverse scoring, or composite construction.\n# BLANK\n\n\n\n\n\n\nImportant\n\n\n\nBLANK: Document any judgment calls here — these are the decisions future you (or a reviewer) will ask about. Delete if not applicable.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html#aggregation-to-state-level",
+    "href": "02_iat_sexuality.html#aggregation-to-state-level",
+    "title": "2  IAT: Sexuality",
+    "section": "Aggregation to State Level",
+    "text": "Aggregation to State Level\n\n\n\n\n\n\nNote\n\n\n\nThis section documents how individual-level or sub-state data was aggregated to the state level. Skip if data is already state-level.\n\n\n\nUnit of Analysis in Raw Data\nBLANK: What is the original unit of observation? (e.g., Individual respondent, County, Zip code)\n\n\nAggregation Method\n\n\n\nFeature\nDecision\nRationale\n\n\n\n\nStatistic\nBLANK (Mean/Median/Sum)\nBLANK\n\n\nMinimum n\nBLANK (e.g., n ≥ 50 per state)\nBLANK\n\n\nWeighting\nBLANK (Unweighted/Survey-weighted)\nBLANK\n\n\nMissing states\nBLANK (Excluded/Imputed)\nBLANK\n\n\n\n# BLANK: Aggregation code here\n\n\nSensitivity Checks\nBLANK: Note any alternative aggregation approaches considered and why the chosen approach was preferred. Delete if not applicable.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html#output-dataset",
+    "href": "02_iat_sexuality.html#output-dataset",
+    "title": "2  IAT: Sexuality",
+    "section": "Output Dataset",
+    "text": "Output Dataset\n\nVariables in Final Output\n\n\n\nVariable\nType\nDescription\nRange\n\n\n\n\nstate\nchr\nTwo-letter state abbreviation\n—\n\n\nyear\nint\nCalendar year\nBLANK–BLANK\n\n\nBLANK\nBLANK\nBLANK\nBLANK\n\n\nBLANK\nBLANK\nBLANK\nBLANK\n\n\n\n\n\nOutput File\nsaveRDS(BLANK, here(\"data\", \"clean\", \"BLANK\", \"BLANK.rds\"))\nFile location: data/clean/BLANK/BLANK.rds\nRows: BLANK\nLast generated: BLANK (Month Year)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html#known-limitations",
+    "href": "02_iat_sexuality.html#known-limitations",
+    "title": "2  IAT: Sexuality",
+    "section": "Known Limitations",
+    "text": "Known Limitations\n\nBLANK\nBLANK",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
+    ]
+  },
+  {
+    "objectID": "02_iat_sexuality.html#references",
+    "href": "02_iat_sexuality.html#references",
+    "title": "2  IAT: Sexuality",
+    "section": "References",
+    "text": "References\nBLANK: Full references for any papers, reports, or technical documentation from the original data collectors.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
   }
 ]

@@ -1,0 +1,198 @@
+---
+title: "IAT: Sexuality"
+author:
+  - name: Seungju Kim
+    orcid: 0009-0009-5166-9170
+    email: seungju7@illinois.edu
+    affiliation: 
+      - name: University of Illinois at Urbana-Champaign
+        department: Psychology
+format: 
+  html:
+    embed-resources: true
+execute:
+  eval: false
+  echo: true
+---
+
+## Source Description
+
+**Full name:** Implicit Association Test - Sexuality\
+**Website:** [Harvard Project Implicit](https://implicit.harvard.edu/implicit/selectatest.html)\
+**Data type:** Survey \
+**Unit of analysis:** State \
+**Geographic Coverage:** 50 U.S. states + D.C. \
+**Temporal Coverage:** 2010-2025
+
+### About the Original Data
+
+Project Implicit (housed within Harvard University) is a web-based platform that allows users to Implicit associations and explicit attitudes towards `sexuality`. 
+
+Data collection for sexuality has been ongoing since 2004 (as of 2026) using non-probability sample of volunteer participants who visit the website through search engines, social media, or as part of school or work.
+
+:::callout-warning
+Researchers should be aware of one significant limitation surrounding the use of `implicit associations` for sexuality: it only measures implicit associations between good and bad for `gay men`. 
+
+This means the `implicit associations test` may not hold meaningful implications for lesbian, bi/pansexual, or otherwise sexually diverse individuals.
+:::
+
+### Original Data Collection
+
+| Feature | Details |
+|------------------------------------|------------------------------------|
+| Collection method | BLANK (e.g., Policy tracking, Online survey, Phone survey) |
+| Sampling frame | BLANK (e.g., All U.S. states, U.S. adult internet users) |
+| Sample type | BLANK (e.g., Census, Probability, Convenience) |
+| Update frequency | BLANK (e.g., Annual, Continuous) |
+| Geographic coverage | BLANK (e.g., State-level, National) |
+| Temporal coverage | BLANK–present |
+
+::: callout-note
+BLANK: Note any important caveats about how the original investigators
+collected or coded this data.
+:::
+
+### Required Citation
+
+If you use this indicator in published research, you must cite the
+original data source in addition to the stigmaR package:
+
+> BLANK: Full citation for original data source here.
+
+------------------------------------------------------------------------
+
+## Access and Download
+
+| Feature | Details |
+|------------------------------------|------------------------------------|
+| Access type | BLANK (e.g., Public download, Registration required, Request) |
+| URL | [BLANK](https://BLANK) |
+| Authentication required | BLANK (Yes/No) |
+| Cost | BLANK (Free/Paid) |
+| Last accessed | BLANK (Month Year) |
+
+### Download Procedure
+
+BLANK: Step-by-step description of how the data was obtained. Be
+specific enough that someone could reproduce this in 5 years if the
+website changes.
+
+``` r
+# BLANK: Download code here
+```
+
+::: callout-warning
+BLANK: Note any known instability in access (e.g., website changes, file
+format shifts across years). Delete this block if not applicable.
+:::
+
+------------------------------------------------------------------------
+
+## Cleaning Procedure
+
+### Raw Data Structure
+
+-   **File format:** BLANK (e.g., `.csv`, `.xlsx`, `.sav`)\
+-   **Rows:** BLANK (e.g., One row per state-year, One row per
+    respondent)\
+-   **Key variables used:** BLANK
+
+### Cleaning Steps
+
+#### 1. BLANK (e.g., Variable Selection)
+
+BLANK: What variables were retained and why. What was excluded and why.
+
+``` r
+# BLANK
+```
+
+#### 2. BLANK (e.g., Exclusion Criteria)
+
+BLANK: What cases/rows were excluded and why.
+
+``` r
+# BLANK
+```
+
+#### 3. BLANK (e.g., Recoding / Scoring)
+
+BLANK: Any recoding, reverse scoring, or composite construction.
+
+``` r
+# BLANK
+```
+
+::: callout-important
+BLANK: Document any judgment calls here — these are the decisions future
+you (or a reviewer) will ask about. Delete if not applicable.
+:::
+
+------------------------------------------------------------------------
+
+## Aggregation to State Level
+
+::: callout-note
+This section documents how individual-level or sub-state data was
+aggregated to the state level. Skip if data is already state-level.
+:::
+
+### Unit of Analysis in Raw Data
+
+BLANK: What is the original unit of observation? (e.g., Individual
+respondent, County, Zip code)
+
+### Aggregation Method
+
+| Feature        | Decision                           | Rationale |
+|----------------|------------------------------------|-----------|
+| Statistic      | BLANK (Mean/Median/Sum)            | BLANK     |
+| Minimum n      | BLANK (e.g., n ≥ 50 per state)     | BLANK     |
+| Weighting      | BLANK (Unweighted/Survey-weighted) | BLANK     |
+| Missing states | BLANK (Excluded/Imputed)           | BLANK     |
+
+``` r
+# BLANK: Aggregation code here
+```
+
+### Sensitivity Checks
+
+BLANK: Note any alternative aggregation approaches considered and why
+the chosen approach was preferred. Delete if not applicable.
+
+------------------------------------------------------------------------
+
+## Output Dataset
+
+### Variables in Final Output
+
+| Variable | Type  | Description                   | Range       |
+|----------|-------|-------------------------------|-------------|
+| `state`  | chr   | Two-letter state abbreviation | —           |
+| `year`   | int   | Calendar year                 | BLANK–BLANK |
+| `BLANK`  | BLANK | BLANK                         | BLANK       |
+| `BLANK`  | BLANK | BLANK                         | BLANK       |
+
+### Output File
+
+``` r
+saveRDS(BLANK, here("data", "clean", "BLANK", "BLANK.rds"))
+```
+
+**File location:** `data/clean/BLANK/BLANK.rds`\
+**Rows:** BLANK\
+**Last generated:** BLANK (Month Year)
+
+------------------------------------------------------------------------
+
+## Known Limitations
+
+-   BLANK
+-   BLANK
+
+------------------------------------------------------------------------
+
+## References
+
+BLANK: Full references for any papers, reports, or technical
+documentation from the original data collectors.

@@ -1,13 +1,15 @@
 ---
-title: "Movement Advancement Project"
+title: "BLANK: Full Name of Data Source"
 author:
   - name: Seungju Kim
     orcid: 0009-0009-5166-9170
     email: seungju7@illinois.edu
     affiliation: 
-      - name: University of Illinois, Urbana-Champaign
+      - name: University of Illinois at Urbana-Champaign
         department: Psychology
-format: html
+format: 
+  html:
+    embed-resources: true
 execute:
   eval: false
   echo: true
@@ -15,61 +17,63 @@ execute:
 
 ## Source Description
 
-**Full name:** Movement Advancement Project Policy Tally  
-**Website:** [https://www.mapresearch.org](https://www.mapresearch.org)  
-**Data type:** Administrative/policy tracking  
-**Unit of analysis:** State-year  
-**Coverage:** 50 U.S. states + D.C. + territories, 2010–present  
+**Full name:** BLANK  
+**Website:** [BLANK](https://BLANK)  
+**Data type:** BLANK (e.g., Administrative/policy tracking, Survey, Experimental)  
+**Unit of analysis:** BLANK (e.g., State-year, Individual)  
+**Coverage:** BLANK (e.g., 50 U.S. states + D.C., 2010–present)  
 
 ### About the Original Data
 
-Briefly describe what this dataset is and who collects it. What is the 
-construct it's measuring? Why is it relevant as a structural stigma indicator?
+BLANK: What is this dataset and who collects it? What construct is it 
+measuring? Why is it relevant as a structural stigma indicator?
 
 ### Original Data Collection
 
 | Feature | Details |
 |---------|---------|
-| Collection method | Policy tracking / expert coding |
-| Sampling frame | All U.S. states and territories |
-| Sample type | Census (not a sample) |
-| Update frequency | Annual |
-| Geographic coverage | State-level |
-| Temporal coverage | 2010–present |
+| Collection method | BLANK (e.g., Policy tracking, Online survey, Phone survey) |
+| Sampling frame | BLANK (e.g., All U.S. states, U.S. adult internet users) |
+| Sample type | BLANK (e.g., Census, Probability, Convenience) |
+| Update frequency | BLANK (e.g., Annual, Continuous) |
+| Geographic coverage | BLANK (e.g., State-level, National) |
+| Temporal coverage | BLANK–present |
 
 ::: {.callout-note}
-Note any important caveats about how the original investigators 
+BLANK: Note any important caveats about how the original investigators 
 collected or coded this data.
 :::
+
+### Required Citation
+
+If you use this indicator in published research, you must cite the 
+original data source in addition to the stigmaR package:
+
+> BLANK: Full citation for original data source here.
 
 ---
 
 ## Access and Download
 
-### How to Access
-
-Describe where and how to obtain the raw data. Is it publicly available? 
-Does it require registration? Is it scraped, downloaded, or accessed via API?
-
 | Feature | Details |
 |---------|---------|
-| Access type | Public download / API / web scrape / request |
-| URL | https://... |
-| Authentication required | Yes/No |
-| Cost | Free / paid |
-| Last accessed | `r Sys.Date()` |
+| Access type | BLANK (e.g., Public download, Registration required, Request) |
+| URL | [BLANK](https://BLANK) |
+| Authentication required | BLANK (Yes/No) |
+| Cost | BLANK (Free/Paid) |
+| Last accessed | BLANK (Month Year) |
 
 ### Download Procedure
 
-Step-by-step description of how we obtained the data. Be specific enough 
-that someone could reproduce this in 5 years when the website has changed.
+BLANK: Step-by-step description of how the data was obtained. Be specific 
+enough that someone could reproduce this in 5 years if the website changes.
 ```r
-# Any download code goes here
+# BLANK: Download code here
 ```
 
 ::: {.callout-warning}
-Note any known instability in access (e.g., website changes, 
-file format shifts across years).
+BLANK: Note any known instability in access (e.g., website changes, 
+file format shifts across years). Delete this block if not applicable.
 :::
 
 ---
@@ -78,41 +82,36 @@ file format shifts across years).
 
 ### Raw Data Structure
 
-Describe what the raw data looks like before any processing.
-
-- **File format:** `.csv` / `.xlsx` / `.txt` / `.pdf`  
-- **Rows:** One row per [state / state-year / indicator]  
-- **Key variables:** List the main variables used  
+- **File format:** BLANK (e.g., `.csv`, `.xlsx`, `.sav`)  
+- **Rows:** BLANK (e.g., One row per state-year, One row per respondent)  
+- **Key variables used:** BLANK  
 
 ### Cleaning Steps
 
-Describe each substantive cleaning decision in order. For each decision, 
-explain both *what* was done and *why*.
+#### 1. BLANK (e.g., Variable Selection)
 
-#### 1. [Step name, e.g., Variable Selection]
-
-What variables were retained and why. What was excluded and why.
+BLANK: What variables were retained and why. What was excluded and why.
 ```r
-# Relevant code
+# BLANK
 ```
 
-#### 2. [Step name, e.g., Handling Missing Data]
+#### 2. BLANK (e.g., Exclusion Criteria)
 
-How missing values were identified and treated.
+BLANK: What cases/rows were excluded and why.
 ```r
-# Relevant code
+# BLANK
 ```
 
-#### 3. [Step name, e.g., Recoding / Scoring]
+#### 3. BLANK (e.g., Recoding / Scoring)
 
-Any recoding, reverse scoring, or composite construction.
+BLANK: Any recoding, reverse scoring, or composite construction.
 ```r
-# Relevant code
+# BLANK
 ```
 
 ::: {.callout-important}
-Document any decisions that involve judgment calls — these are the 
-decisions future you (or a reviewer) will ask about.
+BLANK: Document any judgment calls here — these are the decisions 
+future you (or a reviewer) will ask about. Delete if not applicable.
 :::
 
 ---
@@ -120,29 +119,31 @@ decisions future you (or a reviewer) will ask about.
 ## Aggregation to State Level
 
 ::: {.callout-note}
-Skip this section if the data is already state-level (e.g., MAP).
+This section documents how individual-level or sub-state data was 
+aggregated to the state level. Skip if data is already state-level.
 :::
 
 ### Unit of Analysis in Raw Data
 
-What is the original unit? (e.g., individual respondent, county, zip code)
+BLANK: What is the original unit of observation? 
+(e.g., Individual respondent, County, Zip code)
 
 ### Aggregation Method
 
 | Feature | Decision | Rationale |
 |---------|----------|-----------|
-| Statistic | Mean / Median / Sum | Why this statistic |
-| Minimum n | e.g., n ≥ 50 per state | Why this threshold |
-| Weighting | Unweighted / survey-weighted | Why |
-| Missing states | Excluded / imputed | Why |
+| Statistic | BLANK (Mean/Median/Sum) | BLANK |
+| Minimum n | BLANK (e.g., n ≥ 50 per state) | BLANK |
+| Weighting | BLANK (Unweighted/Survey-weighted) | BLANK |
+| Missing states | BLANK (Excluded/Imputed) | BLANK |
 ```r
-# Aggregation code
+# BLANK: Aggregation code here
 ```
 
 ### Sensitivity Checks
 
-Note any alternative aggregation approaches considered and 
-why the chosen approach was preferred.
+BLANK: Note any alternative aggregation approaches considered and 
+why the chosen approach was preferred. Delete if not applicable.
 
 ---
 
@@ -153,31 +154,29 @@ why the chosen approach was preferred.
 | Variable | Type | Description | Range |
 |----------|------|-------------|-------|
 | `state` | chr | Two-letter state abbreviation | — |
-| `year` | int | Calendar year | 2010–2024 |
-| `map_so_total` | dbl | Sexual orientation policy tally | -10 to 20 |
-| `map_gi_total` | dbl | Gender identity policy tally | -10 to 20.5 |
+| `year` | int | Calendar year | BLANK–BLANK |
+| `BLANK` | BLANK | BLANK | BLANK |
+| `BLANK` | BLANK | BLANK | BLANK |
 
 ### Output File
 ```r
-# Final save
-saveRDS(map_clean, here("data", "clean", "map", "map_clean.rds"))
+saveRDS(BLANK, here("data", "clean", "BLANK", "BLANK.rds"))
 ```
 
-**File location:** `data/clean/map/map_clean.rds`  
-**Rows:** 51 (states + D.C.) × years available  
-**Last generated:** `r Sys.Date()`  
+**File location:** `data/clean/BLANK/BLANK.rds`  
+**Rows:** BLANK  
+**Last generated:** BLANK (Month Year)  
 
 ---
 
 ## Known Limitations
 
-- Limitation 1 and its implications for use
-- Limitation 2
-- Any known errors or inconsistencies in the source data
+- BLANK
+- BLANK
 
 ---
 
 ## References
 
-List any papers, reports, or documentation from the original data 
-collectors that should be cited when using this source.
+BLANK: Full references for any papers, reports, or technical documentation 
+from the original data collectors.

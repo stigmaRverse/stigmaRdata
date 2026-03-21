@@ -1,3 +1,18 @@
+---
+author:
+  - name: Seungju Kim
+    orcid: 0009-0009-5166-9170
+    email: seungju7@illinois.edu
+    affiliation: 
+      - name: University of Illinois, Urbana-Champaign
+        department: Psychology
+format: 
+  html:
+    embed-resources: true
+execute:
+  eval: false
+  echo: true
+---
 # Overview {.unnumbered}
 
 This book documents the data sources, cleaning procedures, and 

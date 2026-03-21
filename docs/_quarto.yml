@@ -14,10 +14,12 @@ book:
   chapters:
     - index.qmd
     - 01_map.qmd
+    - 02_iat_sexuality.qmd
 
 
 format:
   html:
+    number-depth: 1
     theme:
       light:
       - flatly
