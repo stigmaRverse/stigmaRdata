@@ -1,0 +1,8 @@
+---
+title: "stigmaRdata"
+author: "Seungju Kim"
+format: gfm
+---
+
+## Description
+The purpose of this repository is to process raw data, clean, and harmonize to be used in stigmaR package. 

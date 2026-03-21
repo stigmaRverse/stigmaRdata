@@ -1,2 +1,7 @@
-# process_IAT
-Process IAT data
+# stigmaRdata
+Seungju Kim
+
+## Description
+
+The purpose of this repository is to process raw data, clean, and
+harmonize to be used in stigmaR package.

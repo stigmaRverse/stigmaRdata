@@ -1,0 +1,152 @@
+========================================
+STATE: Louisiana's Equality Profile
+========================================
+
+QUICK FACTS
+----------------------------------------
+Total State Population: 4,659,978
+Total Adult Population: 3,564,062
+Total LGBTQ Adult Population: 138,998
+LGBTQ % of State Adult Population: 3.9%
+% of LGBTQ Individuals Raising Children: 29%
+
+POLICY TALLY
+----------------------------------------
+Sexual Orientation Policy Tally: 1.5/20
+Gender Identity Policy Tally: -2.75/20.5
+Overall Tally: -1.25/40.5
+
+LGBTQ LAWS AND POLICIES
+========================================
+
+RELATIONSHIP AND PARENTAL RECOGNITION
+----------------------------------------
+  • State Family Leave Laws Covering Same-Sex Couples
+    SO:  0/1 | GI:  
+  • State Family Leave Laws Allowing Workers to Care for ChildrenThey Are Raising
+    SO:  0/1 | GI:  
+  • Second-Parent Adoption
+    SO:  0/1 | GI:  
+  • Adoption Non-Discrimination Protections for LGBTQ Parents
+    SO:  0/1 | GI:  0/1
+  • Foster Care Non-Discrimination Protections for LGBTQ Parents
+    SO:  0/1 | GI:  0/1
+  • Recognition for Parents Using Assisted Reproduction
+    SO:  0.5/1 | GI:  
+  • Legal Recognition of De Facto Parents
+    SO:  0/1 | GI:  
+
+Subtotal
+  1.5/8 | 1.5/8 | 0/2 | 0/2
+
+Relationship and Parental RecognitionTotal
+  1.5/10 | 1.5/10 | 1.5/10 | 1.5/10
+
+NON-DISCRIMINATION LAWS
+----------------------------------------
+  • Housing Non-Discrimination Laws*
+    SO:  0/1 | GI:  0/1
+  • Public Accommodations Non-Discrimination Laws*
+    SO:  0/1 | GI:  0/1
+  • Credit and Lending Non-Discrimination Laws
+    SO:  0/1 | GI:  0/1
+  • Non-Discrimination Policies for State Employees
+    SO:  0/0.5 | GI:  0/0.5
+  • Negative Law: State Bans Cities and Counties from Passing Non-Discrimination Laws
+    SO: No Negative Law 0/-0.5 | GI: No Negative Law 0/-0.5
+
+Subtotal
+  0/4.5 | 0/4.5 | 0/4.5 | 0/4.5
+
+Non-Discrimination Total
+  0/9 | 0/9 | 0/9 | 0/9
+
+RELIGIOUS EXEMPTION LAWS
+----------------------------------------
+  • Negative Law: Targeted Religious Exemption for Child Welfare Services
+    SO: No Negative Law 0/-0.25 | GI: No Negative Law 0/-0.25
+  • Negative Law: Targeted Religious Exemption for Private Wedding Services
+    SO: No Negative Law 0/-0.25 | GI:  
+  • Negative Law: Targeted Religious Exemption for Medical Professionals
+    SO: No Negative Law 0/-0.25 | GI: No Negative Law 0/-0.25
+  • Negative Law: Targeted Religious Exemption for State and Local Officials Providing Marriage Licenses
+    SO: No Negative Law 0/-0.25 | GI:  
+
+Subtotal
+  -0.25/-1.25 | -0.25/-1.25 | -0.25/-0.75 | -0.25/-0.75
+
+Religious Exemption Laws Total
+  -0.5/-2 | -0.5/-2 | -0.5/-2 | -0.5/-2
+
+LGBTQ YOUTH LAWS AND POLICIES
+----------------------------------------
+  • Anti-Bullying Laws and Policies Covering LGBTQ Students
+    SO:  0/1 | GI:  0/1
+  • Negative Law: "Don't Say Gay" Law Barring or Explicitly Restricting Educators From Discussing LGBTQ People or Issues in Schools
+    SO: NEGATIVE LAW -0.5/-0.5 | GI: NEGATIVE LAW -0.5/-0.5
+  • Negative Law: Laws Banning Local Schools and Districts from Passing LGBTQ Non-Discrimination and/or Anti-Bullying Policies
+    SO: No Negative Law 0/-0.5 | GI: No Negative Law 0/-0.5
+  • Conversion Therapy Ban Covering LGBTQ Youth
+    SO:  0/1 | GI:  0/1
+  • Protections for LGBTQ Youth in the Child Welfare System
+    SO:  0.25/0.5 | GI:  0/0.5
+
+Subtotal
+  -0.25/3.5 | -0.25/3.5 | -0.5/3.5 | -0.5/3.5
+
+LGBTQ Youth Laws Total
+  -0.75/7 | -0.75/7 | -0.75/7 | -0.75/7
+
+HEALTHCARE LAWS AND POLICIES
+----------------------------------------
+  • Health Insurance Providers Banned from Excluding Coverage for Transgender-Specific Care
+    SO:   | GI:  0/1
+  • State Medicaid Policy Related to Coverage for Transgender People
+    SO:   | GI:  0/1
+  • Negative Law: Transgender Inclusive Health Benefits for State Employees
+    SO:   | GI: NEGATIVE LAW -0.5/0.5
+  • Data Collection for LGBTQ Adults
+    SO:  0.5/0.5 | GI:  0.5/0.5
+  • Data Collection for LGBTQ Youth
+    SO:  0/0.5 | GI:  0/0.5
+
+Subtotal
+  0.5/2 | 0.5/2 | 0/4.5 | 0/4.5
+
+Healthcare Total
+  0.5/6.5 | 0.5/6.5 | 0.5/6.5 | 0.5/6.5
+
+CRIMINAL JUSTICE LAWS AND POLICIES
+----------------------------------------
+  • Bans on Panic Defense
+    SO:  0/1 | GI:  0/1
+  • Negative Law: State Criminalizes Exposure to and/or Transmission of HIV
+    SO: NEGATIVE LAW -1/-1 | GI: NEGATIVE LAW -1/-1
+
+Subtotal
+  0/2 | 0/2 | -1/2 | -1/2
+
+Criminal Justice Total
+  -1/4 | -1/4 | -1/4 | -1/4
+
+ABILITY FOR TRANSGENDER PEOPLE TO CORRECTNAME AND GENDER MARKER ON IDENTITY DOCUMENTS
+----------------------------------------
+  • Driver's Licenses: Gender Neutral Options
+    SO:   | GI: NEGATIVE LAW 0/1
+  • Birth Certificates
+    SO:   | GI: NEGATIVE LAW -1/1
+  • Name Change
+    SO:   | GI:  1/1
+
+Subtotal
+   |  | -1/4 | -1/4
+
+Identity Documents Total
+  -1/4 | -1/4 | -1/4 | -1/4
+
+LOCAL NONDISCRIMINATION ORDINANCES
+========================================
+
+No local nondiscrimination ordinances
+
+

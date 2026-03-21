@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 data/raw_data*
+*.Rproj
+.RDS_Store
