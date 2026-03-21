@@ -1,0 +1,59 @@
+# Overview {.unnumbered}
+
+This book documents the data sources, cleaning procedures, and 
+methodological decisions underlying the 
+[stigmaR](https://github.com/your-org/stigmaR) R package.
+
+stigmaR measures structural stigma — the societal-level conditions that 
+disadvantage stigmatized groups — for use in health disparities research. 
+The data pipeline documented here transforms raw public data into the 
+structured indicators that stigmaR exposes to researchers.
+
+## Who This Is For {.unnumbered}
+
+This documentation is intended for:
+
+- **Researchers** who want to understand how stigmaR indicators are 
+  constructed before using them in analysis
+- **Reviewers and collaborators** who need methodological transparency
+- **Future contributors** (including future me) who need to maintain 
+  or extend the pipeline
+
+## Data Sources {.unnumbered}
+
+| Source | Coverage | Indicators |
+|--------|----------|------------|
+| Movement Advancement Project (MAP) | 2010–present | Policy environment scores |
+| Project Implicit (IAT) | 2006–present | Implicit bias by state |
+
+## How to Read This Book {.unnumbered}
+
+Each chapter covers one data source and follows a consistent structure:
+
+1. **Source description** — what it is and where it comes from
+2. **Access and download** — how raw data is obtained
+3. **Cleaning decisions** — variable selection, exclusions, recoding
+4. **Limitations** — known issues and caveats
+5. **Output** — what the final dataset looks like
+
+## Versioning and Changelog {.unnumbered}
+
+Data pipelines and coding decisions evolve over time. See the 
+[Changelog](changelog.qmd) for a record of substantive changes across 
+versions of stigmaRdata.
+
+Current version: `0.1.0`  
+Last updated: `r Sys.Date()`
+
+## Citation {.unnumbered}
+
+If you use stigmaR in published research, please cite:
+
+> Kim, S. (2028). stigmaR: Structural stigma measures for health 
+> disparities research. R package version x.x.x.
+
+## Contact {.unnumbered}
+
+Questions about the data pipeline can be filed as a 
+[GitHub Issue](https://github.com/your-org/stigmaR/issues) in the 
+main stigmaR repository.

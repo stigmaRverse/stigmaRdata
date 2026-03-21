@@ -1,0 +1,183 @@
+---
+title: "Movement Advancement Project"
+author:
+  - name: Seungju Kim
+    orcid: 0009-0009-5166-9170
+    email: seungju7@illinois.edu
+    affiliation: 
+      - name: University of Illinois, Urbana-Champaign
+        department: Psychology
+format: html
+execute:
+  eval: false
+  echo: true
+---
+
+## Source Description
+
+**Full name:** Movement Advancement Project Policy Tally  
+**Website:** [https://www.mapresearch.org](https://www.mapresearch.org)  
+**Data type:** Administrative/policy tracking  
+**Unit of analysis:** State-year  
+**Coverage:** 50 U.S. states + D.C. + territories, 2010–present  
+
+### About the Original Data
+
+Briefly describe what this dataset is and who collects it. What is the 
+construct it's measuring? Why is it relevant as a structural stigma indicator?
+
+### Original Data Collection
+
+| Feature | Details |
+|---------|---------|
+| Collection method | Policy tracking / expert coding |
+| Sampling frame | All U.S. states and territories |
+| Sample type | Census (not a sample) |
+| Update frequency | Annual |
+| Geographic coverage | State-level |
+| Temporal coverage | 2010–present |
+
+::: {.callout-note}
+Note any important caveats about how the original investigators 
+collected or coded this data.
+:::
+
+---
+
+## Access and Download
+
+### How to Access
+
+Describe where and how to obtain the raw data. Is it publicly available? 
+Does it require registration? Is it scraped, downloaded, or accessed via API?
+
+| Feature | Details |
+|---------|---------|
+| Access type | Public download / API / web scrape / request |
+| URL | https://... |
+| Authentication required | Yes/No |
+| Cost | Free / paid |
+| Last accessed | `r Sys.Date()` |
+
+### Download Procedure
+
+Step-by-step description of how we obtained the data. Be specific enough 
+that someone could reproduce this in 5 years when the website has changed.
+```r
+# Any download code goes here
+```
+
+::: {.callout-warning}
+Note any known instability in access (e.g., website changes, 
+file format shifts across years).
+:::
+
+---
+
+## Cleaning Procedure
+
+### Raw Data Structure
+
+Describe what the raw data looks like before any processing.
+
+- **File format:** `.csv` / `.xlsx` / `.txt` / `.pdf`  
+- **Rows:** One row per [state / state-year / indicator]  
+- **Key variables:** List the main variables used  
+
+### Cleaning Steps
+
+Describe each substantive cleaning decision in order. For each decision, 
+explain both *what* was done and *why*.
+
+#### 1. [Step name, e.g., Variable Selection]
+
+What variables were retained and why. What was excluded and why.
+```r
+# Relevant code
+```
+
+#### 2. [Step name, e.g., Handling Missing Data]
+
+How missing values were identified and treated.
+```r
+# Relevant code
+```
+
+#### 3. [Step name, e.g., Recoding / Scoring]
+
+Any recoding, reverse scoring, or composite construction.
+```r
+# Relevant code
+```
+
+::: {.callout-important}
+Document any decisions that involve judgment calls — these are the 
+decisions future you (or a reviewer) will ask about.
+:::
+
+---
+
+## Aggregation to State Level
+
+::: {.callout-note}
+Skip this section if the data is already state-level (e.g., MAP).
+:::
+
+### Unit of Analysis in Raw Data
+
+What is the original unit? (e.g., individual respondent, county, zip code)
+
+### Aggregation Method
+
+| Feature | Decision | Rationale |
+|---------|----------|-----------|
+| Statistic | Mean / Median / Sum | Why this statistic |
+| Minimum n | e.g., n ≥ 50 per state | Why this threshold |
+| Weighting | Unweighted / survey-weighted | Why |
+| Missing states | Excluded / imputed | Why |
+```r
+# Aggregation code
+```
+
+### Sensitivity Checks
+
+Note any alternative aggregation approaches considered and 
+why the chosen approach was preferred.
+
+---
+
+## Output Dataset
+
+### Variables in Final Output
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `state` | chr | Two-letter state abbreviation | — |
+| `year` | int | Calendar year | 2010–2024 |
+| `map_so_total` | dbl | Sexual orientation policy tally | -10 to 20 |
+| `map_gi_total` | dbl | Gender identity policy tally | -10 to 20.5 |
+
+### Output File
+```r
+# Final save
+saveRDS(map_clean, here("data", "clean", "map", "map_clean.rds"))
+```
+
+**File location:** `data/clean/map/map_clean.rds`  
+**Rows:** 51 (states + D.C.) × years available  
+**Last generated:** `r Sys.Date()`  
+
+---
+
+## Known Limitations
+
+- Limitation 1 and its implications for use
+- Limitation 2
+- Any known errors or inconsistencies in the source data
+
+---
+
+## References
+
+List any papers, reports, or documentation from the original data 
+collectors that should be cited when using this source.

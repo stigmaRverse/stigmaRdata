@@ -1,0 +1,16 @@
+project:
+  type: book
+  output-dir: ../../docs_site
+
+book:
+  title: "stigmaRdata: Data Processing Documentation"  # main page title
+  author:
+  - name: Seungju Kim
+    orcid: 0009-0009-5166-9170
+    email: seungju7@illinois.edu
+    affiliation:
+      - name: University of Illinois at Urbana-Champaign
+        department: Psychology
+  chapters:
+    - index.qmd
+    - 01_map.qmd
