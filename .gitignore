@@ -7,3 +7,6 @@ data/raw_data*
 .RDS_Store
 
 /.quarto/
+
+raw_data/*
+data/clean_data*

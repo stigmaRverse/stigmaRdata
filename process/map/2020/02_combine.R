@@ -1,7 +1,7 @@
 pacman::p_load(here, purrr)
 
-input_folder <- here("data", "2_clean", "2020")
-output_file <- here("data", "3_combine", "2020", "combined.txt")
+input_folder <- here("clean_data", "map", "2020")
+output_file <- here("clean_data", "map", "2020", "combined.txt")
 
 # Create output directory
 dir.create(dirname(output_file), recursive = TRUE, showWarnings = FALSE)

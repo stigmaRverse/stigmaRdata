@@ -263,8 +263,8 @@ process_all_html_files <- function(input_folder, output_folder) {
 # RUN THE PROCESSING
 # ============================================
 
-input_folder <- here("data", "1_raw", "2020")
-output_folder <- here("data", "2_clean", "2020")
+input_folder <- here("raw_data", "map", "1_raw", "2020")
+output_folder <- here("clean_data", "map", "2020")
 
 # Process all files with aggressive cleaning
 summary <- process_all_html_files(input_folder, output_folder)
