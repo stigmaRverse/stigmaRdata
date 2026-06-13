@@ -24,23 +24,6 @@ disadvantage stigmatized groups — for use in health disparities research.
 The data pipeline documented here transforms raw public data into the 
 structured indicators that stigmaR exposes to researchers.
 
-## Who This Is For {.unnumbered}
-
-This documentation is intended for:
-
-- **Researchers** who want to understand how stigmaR indicators are 
-  constructed before using them in analysis
-- **Reviewers and collaborators** who need methodological transparency
-- **Future contributors** (including future me) who need to maintain 
-  or extend the pipeline
-
-## Data Sources {.unnumbered}
-
-| Source | Coverage | Indicators |
-|--------|----------|------------|
-| Movement Advancement Project (MAP) | 2010–present | Policy environment scores |
-| Project Implicit (IAT) | 2006–present | Implicit bias by state |
-
 ## How to Read This Book {.unnumbered}
 
 Each chapter covers one data source and follows a consistent structure:
@@ -57,15 +40,35 @@ Data pipelines and coding decisions evolve over time. See the
 [Changelog](changelog.qmd) for a record of substantive changes across 
 versions of stigmaRdata.
 
-Current version: `0.1.0`  
-Last updated: `r Sys.Date()`
+**Current version: {{< var version >}}**
 
 ## Citation {.unnumbered}
 
-If you use stigmaR in published research, please cite:
+If you use the `stigmaR` R package in published research, please cite:
 
 > Kim, S. (2028). stigmaR: Structural stigma measures for health 
 > disparities research. R package version x.x.x.
+
+If you did **not** use the `stigmaR` package, but instead data from the stigmaRdata pipeline, please cite:
+
+> Kim, S. ({{< var year >}}). stigmaRdata: Data Processing Documentation. Version {{< var version >}}. <https://github.com/follhim/stigmaRdata>
+
+## Who This Is For {.unnumbered}
+
+This documentation is intended for:
+
+- **Researchers** who want to understand how stigmaR indicators are 
+  constructed before using them in analysis
+- **Reviewers and collaborators** who need methodological transparency
+- **Future contributors** (including future me) who need to maintain 
+  or extend the pipeline
+
+## Data Sources {.unnumbered}
+
+| Source | Coverage | Indicators |
+|--------|----------|------------|
+| Movement Advancement Project (MAP) | 2010–present | Policy environment scores |
+| Project Implicit (IAT) | 2006–present | Implicit bias by state |
 
 ## Contact {.unnumbered}
 

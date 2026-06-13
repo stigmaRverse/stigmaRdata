@@ -15,76 +15,66 @@ execute:
   echo: true
 ---
 
-fs
 ## Source Description
 
 **Full name:** Implicit Association Test - Sexuality\
 **Website:** [Harvard Project Implicit](https://implicit.harvard.edu/implicit/selectatest.html)\
-**Data type:** Survey \
-**Unit of analysis:** State \
-**Geographic Coverage:** 50 U.S. states + D.C. \
-**Temporal Coverage:** 2010-2025
+**Data type:** Survey\
+**Unit of analysis:** State\
+**Geographic Coverage:** 50 U.S. states + D.C.\
+**Temporal Coverage:** 2016–2025
 
 ### About the Original Data
 
-Project Implicit (housed within Harvard University) is a web-based platform that allows users to Implicit associations and explicit attitudes towards `sexuality`. 
+Project Implicit (housed within Harvard University) is a web-based platform that collects implicit associations and explicit attitudes toward sexuality. Data collection for the sexuality IAT has been ongoing since 2004 using a non-probability sample of volunteer participants who visit the website through search engines, social media, or school/work referrals.
 
-Data collection for sexuality has been ongoing since 2004 (as of 2026) using non-probability sample of volunteer participants who visit the website through search engines, social media, or as part of school or work.
-
-:::callout-warning
-Researchers should be aware of one significant limitation surrounding the use of `implicit associations` for sexuality: it only measures implicit associations between good and bad for `gay men`. 
-
-This means the `implicit associations test` may not hold meaningful implications for lesbian, bi/pansexual, or otherwise sexually diverse individuals.
+::: callout-warning
+Researchers should be aware of one significant limitation of the implicit associations measure for sexuality: it only captures implicit associations between good/bad and **gay men** (via the D-score). This means the implicit measure may not hold meaningful implications for lesbian, bi/pansexual, or otherwise sexually diverse individuals.
 :::
 
 ### Original Data Collection
 
 | Feature | Details |
-|------------------------------------|------------------------------------|
-| Collection method | BLANK (e.g., Policy tracking, Online survey, Phone survey) |
-| Sampling frame | BLANK (e.g., All U.S. states, U.S. adult internet users) |
-| Sample type | BLANK (e.g., Census, Probability, Convenience) |
-| Update frequency | BLANK (e.g., Annual, Continuous) |
-| Geographic coverage | BLANK (e.g., State-level, National) |
-| Temporal coverage | BLANK–present |
+|------------------------------------|----------------------------------------|
+| Collection method | Continuous online survey (self-selected) |
+| Sampling frame | U.S. adult internet users |
+| Sample type | Convenience (non-probability) |
+| Update frequency | Annual public data releases |
+| Geographic coverage | State-level (U.S. only) |
+| Temporal coverage | 2004–present |
 
 ::: callout-note
-BLANK: Note any important caveats about how the original investigators
-collected or coded this data.
+Project Implicit releases public-use datasets annually. File formats vary by year — earlier years are released as `.sav` (SPSS), later years as `.csv`. Variable naming conventions also shift across years (e.g., `tgaywomen` → `tgayleswomen` starting in 2017).
 :::
 
 ### Required Citation
 
-If you use this indicator in published research, you must cite the
-original data source in addition to the stigmaR package:
+If you use this indicator in published research, you must cite the original data source in addition to the stigmaR package:
 
-> BLANK: Full citation for original data source here.
+> Xu, K., Nosek, B., & Greenwald, A. (2014). Psychology data from the Race Implicit Association Test on the Project Implicit Demo website. *Journal of Open Psychology Data, 2*(1). https://doi.org/10.5334/jopd.ac
 
 ------------------------------------------------------------------------
 
 ## Access and Download
 
 | Feature | Details |
-|------------------------------------|------------------------------------|
-| Access type | BLANK (e.g., Public download, Registration required, Request) |
-| URL | [BLANK](https://BLANK) |
-| Authentication required | BLANK (Yes/No) |
-| Cost | BLANK (Free/Paid) |
-| Last accessed | BLANK (Month Year) |
+|------------------------------------|----------------------------------------|
+| Access type | Public download |
+| URL | [OSF — Project Implicit Public Data](https://osf.io/y9hiq/) |
+| Authentication required | No |
+| Cost | Free |
+| Last accessed | January 2026 |
 
 ### Download Procedure
 
-BLANK: Step-by-step description of how the data was obtained. Be
-specific enough that someone could reproduce this in 5 years if the
-website changes.
+Annual sexuality IAT datasets are available on the Project Implicit OSF page. Files are organized by year and released in `.csv` or `.sav` format.
 
-``` r
-# BLANK: Download code here
-```
+1. Navigate to the OSF repository linked above.
+2. Download one file per year for the Sexuality IAT (2016–2025).
+3. Place files in `data/raw_data/iat/sexuality/`, organized by year.
 
 ::: callout-warning
-BLANK: Note any known instability in access (e.g., website changes, file
-format shifts across years). Delete this block if not applicable.
+2015 data uses a different variable set — it is missing several policy items (`adoptchild`, `serverights`, `transgender`, `marriagerights_3num`, `relationslegal_3num`) that are required for the composite indices. **2015 is excluded from this pipeline.** Pre-2015 data also differ substantially in structure and are not used.
 :::
 
 ------------------------------------------------------------------------
@@ -93,107 +83,214 @@ format shifts across years). Delete this block if not applicable.
 
 ### Raw Data Structure
 
--   **File format:** BLANK (e.g., `.csv`, `.xlsx`, `.sav`)\
--   **Rows:** BLANK (e.g., One row per state-year, One row per
-    respondent)\
--   **Key variables used:** BLANK
+- **File format:** `.csv` (2016+) and `.sav` (select years)\
+- **Rows:** One row per respondent\
+- **Key variables used:** `state`, `year`, `d_biep.straight_good_all`, `att_7`, `tgaymen`, `tgayleswomen` / `tgaywomen`, `marriagerights_3num`, `relationslegal_3num`, `adoptchild`, `serverights`, `transgender`
 
 ### Cleaning Steps
 
-#### 1. BLANK (e.g., Variable Selection)
+#### 1. File Loading and Year Exclusion
 
-BLANK: What variables were retained and why. What was excluded and why.
+All `.csv` and `.sav` files in the raw data folder are read in and merged into a single named list. The 2015 file is excluded due to incompatible variable structure.
 
 ``` r
-# BLANK
+csv_files <- csv_files[!grepl("2015", csv_files)]
 ```
 
-#### 2. BLANK (e.g., Exclusion Criteria)
-
-BLANK: What cases/rows were excluded and why.
+Column names are normalized to lowercase to handle inconsistent casing across years and file types.
 
 ``` r
-# BLANK
+names(df) <- tolower(names(df))
 ```
 
-#### 3. BLANK (e.g., Recoding / Scoring)
+#### 2. Variable Construction and Scoring
 
-BLANK: Any recoding, reverse scoring, or composite construction.
+Nine item-level variables are constructed, each scored so that **higher values = more stigma** (anti-gay/lesbian attitudes).
+
+A helper function `grab()` is used throughout to safely retrieve columns that may not exist in all years — returning `NA` if the variable is absent rather than throwing an error.
 
 ``` r
-# BLANK
+grab <- function(df, col) {
+  if (col %in% names(df)) df[[col]] else rep(NA_real_, nrow(df))
+}
+```
+
+```{r}
+#| eval: true
+#| echo: false
+#| column: page
+library(DT)
+
+items_dict <- data.frame(
+  Variable = c(
+    "iat_sex_imp_d",
+    "iat_sex_exp_att",
+    "iat_sex_exp_therm_gm",
+    "iat_sex_exp_therm_gw",
+    "iat_sex_exp_pol_marr",
+    "iat_sex_exp_pol_legal",
+    "iat_sex_exp_pol_adopt",
+    "iat_sex_exp_pol_serv",
+    "iat_sex_exp_pol_trans"
+  ),
+  Label = c(
+    "Implicit D-score",
+    "Explicit attitude toward gay people",
+    "Feeling thermometer: gay men (reversed)",
+    "Feeling thermometer: lesbian women (reversed)",
+    "Policy: marriage equality",
+    "Policy: legal recognition of same-sex relations",
+    "Policy: same-sex adoption rights",
+    "Policy: right to refuse service",
+    "Policy: transgender bathroom access"
+  ),
+  Type = c(
+    "Implicit",
+    "Explicit — Attitude",
+    "Explicit — Thermometer",
+    "Explicit — Thermometer",
+    "Explicit — Policy",
+    "Explicit — Policy",
+    "Explicit — Policy",
+    "Explicit — Policy",
+    "Explicit — Policy"
+  ),
+  Source_Variable = c(
+    "d_biep.straight_good_all",
+    "att_7",
+    "tgaymen",
+    "tgayleswomen / tgaywomen",
+    "marriagerights_3num",
+    "relationslegal_3num",
+    "adoptchild",
+    "serverights",
+    "transgender"
+  ),
+  Scoring = c(
+    "Higher = stronger pro-straight implicit bias",
+    "Higher = more positive toward straight (more stigma)",
+    "10 − raw score; higher = more stigma",
+    "10 − raw score; higher = more stigma. tgaywomen used as fallback for 2016",
+    "0 = support marriage equality, 1 = oppose, NA = no opinion",
+    "0 = support legal recognition, 1 = oppose, NA = no opinion",
+    "0 = support adoption rights, 1 = oppose, NA = no opinion",
+    "1 = support right to refuse service (high stigma), 0 = oppose",
+    "1 = oppose trans bathroom access (high stigma), 0 = support"
+  ),
+  stringsAsFactors = FALSE
+)
+
+datatable(
+  items_dict,
+  rownames = FALSE,
+  colnames = c("Variable", "Label", "Type", "Source Variable", "Scoring"),
+  options = list(
+    pageLength = 9,
+    dom = "ft",
+    columnDefs = list(
+      list(width = "160px", targets = 0),
+      list(width = "200px", targets = 1),
+      list(width = "140px", targets = 2),
+      list(width = "170px", targets = 3)
+    )
+  )
+)
 ```
 
 ::: callout-important
-BLANK: Document any judgment calls here — these are the decisions future
-you (or a reviewer) will ask about. Delete if not applicable.
+`iat_sex_explicit_bel` (belief that sexuality is environmentally determined, from `sexualityorigin`) was planned but is **not included** — this variable does not appear in any Project Implicit sexuality dataset from 2016 onward.
 :::
 
-------------------------------------------------------------------------
+#### 3. State Filtering
+
+After aggregation, state strings are normalized (uppercase, whitespace stripped, SPSS labels removed via `haven::zap_labels()`). Only the 50 U.S. states + D.C. are retained.
+
+``` r
+mutate(state = toupper(trimws(as.character(haven::zap_labels(state))))) |>
+  filter(state %in% us_states_dc)
+```
 
 ## Aggregation to State Level
 
-::: callout-note
-This section documents how individual-level or sub-state data was
-aggregated to the state level. Skip if data is already state-level.
-:::
-
 ### Unit of Analysis in Raw Data
 
-BLANK: What is the original unit of observation? (e.g., Individual
-respondent, County, Zip code)
+Individual respondent (one row per person per year).
 
 ### Aggregation Method
 
-| Feature        | Decision                           | Rationale |
-|----------------|------------------------------------|-----------|
-| Statistic      | BLANK (Mean/Median/Sum)            | BLANK     |
-| Minimum n      | BLANK (e.g., n ≥ 50 per state)     | BLANK     |
-| Weighting      | BLANK (Unweighted/Survey-weighted) | BLANK     |
-| Missing states | BLANK (Excluded/Imputed)           | BLANK     |
+| Feature | Decision | Rationale |
+|---|---|---|
+| Statistic | Mean | Standard for IAT D-score and Likert items aggregated to state level |
+| Minimum n | None applied at this stage | Downstream analyses apply their own thresholds |
+| Weighting | Unweighted | Project Implicit does not provide sampling weights |
+| Missing states | Excluded | States with no respondents in a given year produce no row |
+
+For each item, both the **mean** and a **respondent count** (`iat_sex_n_{item}`) are computed per state × year. The count columns are retained in the items dataset for downstream quality checks.
 
 ``` r
-# BLANK: Aggregation code here
+group_by(year, state) |>
+  summarise(
+    across(c(iat_sex_imp_d, ...), ~ sum(!is.na(.x)), .names = "iat_sex_n_{sub('iat_sex_', '', .col)}"),
+    across(c(iat_sex_imp_d, ...), ~ mean(.x, na.rm = TRUE), .names = "{.col}"),
+    .groups = "drop"
+  )
 ```
-
-### Sensitivity Checks
-
-BLANK: Note any alternative aggregation approaches considered and why
-the chosen approach was preferred. Delete if not applicable.
-
-------------------------------------------------------------------------
 
 ## Output Dataset
 
 ### Variables in Final Output
 
-| Variable | Type  | Description                   | Range       |
-|----------|-------|-------------------------------|-------------|
-| `state`  | chr   | Two-letter state abbreviation | —           |
-| `year`   | int   | Calendar year                 | BLANK–BLANK |
-| `BLANK`  | BLANK | BLANK                         | BLANK       |
-| `BLANK`  | BLANK | BLANK                         | BLANK       |
+#### Item-Level
+**`iat_sexuality_items.Rds`** — item-level dataset (state × year)
 
-### Output File
+| Variable | Type | Description | Scoring |
+|---|---|---|---|
+| `state` | chr | Two-letter state abbreviation | — |
+| `year` | int | Calendar year | 2016–2025 |
+| `iat_sex_imp_d` | dbl | Implicit D-score | Higher = more pro-straight bias |
+| `iat_sex_exp_att` | dbl | Explicit attitude (7-pt) | Higher = more stigma |
+| `iat_sex_exp_therm_gm` | dbl | Thermometer: gay men (reversed) | Higher = more stigma |
+| `iat_sex_exp_therm_gw` | dbl | Thermometer: lesbian women (reversed) | Higher = more stigma |
+| `iat_sex_exp_pol_marr` | dbl | Policy: marriage equality | 0–1; higher = more stigma |
+| `iat_sex_exp_pol_legal` | dbl | Policy: legal recognition | 0–1; higher = more stigma |
+| `iat_sex_exp_pol_adopt` | dbl | Policy: adoption rights | 0–1; higher = more stigma |
+| `iat_sex_exp_pol_serv` | dbl | Policy: right to refuse service | 0–1; higher = more stigma |
+| `iat_sex_exp_pol_trans` | dbl | Policy: trans bathroom access | 0–1; higher = more stigma |
+| `iat_sex_n_{item}` | int | Respondent count per item | — |
+
+#### Composite-level
+**`iat_sexuality_indices.Rds`** — composite-level dataset (state × year)
+
+| Variable | Type | Description | Components |
+|---|---|---|---|
+| `state` | chr | Two-letter state abbreviation | — |
+| `year` | int | Calendar year | 2016–2025 |
+| `iat_sex_implicit` | dbl | Implicit stigma index | `iat_sex_imp_d` |
+| `iat_sex_explicit_therm` | dbl | Thermometer composite | Mean of `therm_gm`, `therm_gw` |
+| `iat_sex_explicit_pol` | dbl | Policy composite | Mean of 5 policy items |
+| `iat_sex_explicit` | dbl | Omnibus explicit index | Mean of all 7 explicit items |
+
+Composites use `rowMeans(..., na.rm = TRUE)` so that state-years with partial item coverage still receive a score.
+
+### Output Files
 
 ``` r
-saveRDS(BLANK, here("data", "clean", "BLANK", "BLANK.rds"))
+saveRDS(iat_sexuality_items,   here("data/clean_data/iat_sexuality_items.Rds"))
+saveRDS(iat_sexuality_indices, here("data/clean_data/iat_sexuality_indices.Rds"))
 ```
 
-**File location:** `data/clean/BLANK/BLANK.rds`\
-**Rows:** BLANK\
-**Last generated:** BLANK (Month Year)
+**File locations:**
 
-------------------------------------------------------------------------
+- `data/clean_data/iat_sexuality_items.Rds`
+- `data/clean_data/iat_sexuality_indices.Rds`
 
 ## Known Limitations
 
--   BLANK
--   BLANK
-
-------------------------------------------------------------------------
+- **Non-probability sample:** Project Implicit data come from self-selected volunteers. State-level estimates reflect the online population visiting the site, not representative state samples.
+- **Implicit measure scope:** The D-score measures implicit associations for gay men only. Implicit attitudes toward lesbian women, bisexual, or other sexually diverse groups are not captured.
+- **`iat_sex_explicit_bel` not available:** The planned belief-about-origin item (`sexualityorigin`) does not appear in any 2016+ dataset and is excluded.
+- **2015 excluded:** Variable structure is incompatible with 2016+; a separate pipeline would be needed to incorporate it.
+- **Thermometer variable rename:** `tgaywomen` was renamed `tgayleswomen` starting in 2017. The pipeline handles this via `coalesce()` but researchers should verify continuity if comparing pre- vs. post-2017 estimates.
 
 ## References
 
-BLANK: Full references for any papers, reports, or technical
-documentation from the original data collectors.

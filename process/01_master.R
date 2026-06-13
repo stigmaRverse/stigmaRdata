@@ -10,8 +10,8 @@
 pacman::p_load(tidyverse, here)
 
 # ── Load cleaned source datasets ─────────────────────────────────────────────
-iat_sex_items   <- readRDS(here("clean_data/iat_sexuality_items.Rds"))
-iat_sex_indices <- readRDS(here("clean_data/iat_sexuality_indices.Rds"))
+iat_sex_items   <- readRDS(here("data/clean_data/iat_sexuality_items.Rds"))
+iat_sex_indices <- readRDS(here("data/clean_data/iat_sexuality_indices.Rds"))
 # iat_black_items   <- readRDS(here("clean_data/iat_race_items.Rds"))
 # iat_black_indices <- readRDS(here("clean_data/iat_race_indices.Rds"))
 # map_items         <- readRDS(here("clean_data/map_items.Rds"))
@@ -36,9 +36,9 @@ stopifnot(
 )
 
 # ── Save to release_data/ ─────────────────────────────────────────────────────
-dir.create(here("release_data"), showWarnings = FALSE)
-save(composite, file = here("release_data/composite.rda"))
-save(items,     file = here("release_data/items.rda"))
+dir.create(here("data/release_data"), showWarnings = FALSE, recursive = TRUE)
+save(composite, file = here("data/release_data/composite.rda"))
+save(items,     file = here("data/release_data/items.rda"))
 
 message("01_master.R complete.",
         "\n  composite : ", nrow(composite), " rows, ", ncol(composite), " cols",

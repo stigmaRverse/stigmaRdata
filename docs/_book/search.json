@@ -44,7 +44,7 @@
     "href": "index.html#versioning-and-changelog",
     "title": "stigmaRdata: Data Processing Documentation",
     "section": "Versioning and Changelog",
-    "text": "Versioning and Changelog\nData pipelines and coding decisions evolve over time. See the Changelog for a record of substantive changes across versions of stigmaRdata.\nCurrent version: 0.1.0\nLast updated: r Sys.Date()",
+    "text": "Versioning and Changelog\nData pipelines and coding decisions evolve over time. See the Changelog for a record of substantive changes across versions of stigmaRdata.\nCurrent version: 0.1.0",
     "crumbs": [
       "Overview"
     ]
@@ -54,7 +54,7 @@
     "href": "index.html#citation",
     "title": "stigmaRdata: Data Processing Documentation",
     "section": "Citation",
-    "text": "Citation\nIf you use stigmaR in published research, please cite:\n\nKim, S. (2028). stigmaR: Structural stigma measures for health disparities research. R package version x.x.x.",
+    "text": "Citation\nIf you use the stigmaR R package in published research, please cite:\n\nKim, S. (2028). stigmaR: Structural stigma measures for health disparities research. R package version x.x.x.\n\nIf you did not use the stigmaR package, but instead data from the stigmaRdata pipeline, please cite:\n\nKim, S. (2026). stigmaRdata: Data Processing Documentation. Version 0.1.0. https://github.com/follhim/stigmaRdata",
     "crumbs": [
       "Overview"
     ]
@@ -154,7 +154,7 @@
     "href": "02_iat_sexuality.html",
     "title": "2  IAT: Sexuality",
     "section": "",
-    "text": "Source Description\nFull name: Implicit Association Test - Sexuality\nWebsite: Harvard Project Implicit\nData type: Survey\nUnit of analysis: State\nGeographic Coverage: 50 U.S. states + D.C.\nTemporal Coverage: 2010-2025",
+    "text": "Source Description\nFull name: Implicit Association Test - Sexuality\nWebsite: Harvard Project Implicit\nData type: Survey\nUnit of analysis: State\nGeographic Coverage: 50 U.S. states + D.C.\nTemporal Coverage: 2016–2025",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "02_iat_sexuality.html#source-description",
     "title": "2  IAT: Sexuality",
     "section": "",
-    "text": "About the Original Data\nProject Implicit (housed within Harvard University) is a web-based platform that allows users to Implicit associations and explicit attitudes towards sexuality.\nData collection for sexuality has been ongoing since 2004 (as of 2026) using non-probability sample of volunteer participants who visit the website through search engines, social media, or as part of school or work.\n\n\n\n\n\n\nWarning\n\n\n\nResearchers should be aware of one significant limitation surrounding the use of implicit associations for sexuality: it only measures implicit associations between good and bad for gay men.\nThis means the implicit associations test may not hold meaningful implications for lesbian, bi/pansexual, or otherwise sexually diverse individuals.\n\n\n\n\nOriginal Data Collection\n\n\n\n\n\n\n\nFeature\nDetails\n\n\n\n\nCollection method\nBLANK (e.g., Policy tracking, Online survey, Phone survey)\n\n\nSampling frame\nBLANK (e.g., All U.S. states, U.S. adult internet users)\n\n\nSample type\nBLANK (e.g., Census, Probability, Convenience)\n\n\nUpdate frequency\nBLANK (e.g., Annual, Continuous)\n\n\nGeographic coverage\nBLANK (e.g., State-level, National)\n\n\nTemporal coverage\nBLANK–present\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nBLANK: Note any important caveats about how the original investigators collected or coded this data.\n\n\n\n\nRequired Citation\nIf you use this indicator in published research, you must cite the original data source in addition to the stigmaR package:\n\nBLANK: Full citation for original data source here.",
+    "text": "About the Original Data\nProject Implicit (housed within Harvard University) is a web-based platform that collects implicit associations and explicit attitudes toward sexuality. Data collection for the sexuality IAT has been ongoing since 2004 using a non-probability sample of volunteer participants who visit the website through search engines, social media, or school/work referrals.\n\n\n\n\n\n\nWarning\n\n\n\nResearchers should be aware of one significant limitation of the implicit associations measure for sexuality: it only captures implicit associations between good/bad and gay men (via the D-score). This means the implicit measure may not hold meaningful implications for lesbian, bi/pansexual, or otherwise sexually diverse individuals.\n\n\n\n\nOriginal Data Collection\n\n\n\n\n\n\n\nFeature\nDetails\n\n\n\n\nCollection method\nContinuous online survey (self-selected)\n\n\nSampling frame\nU.S. adult internet users\n\n\nSample type\nConvenience (non-probability)\n\n\nUpdate frequency\nAnnual public data releases\n\n\nGeographic coverage\nState-level (U.S. only)\n\n\nTemporal coverage\n2004–present\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nProject Implicit releases public-use datasets annually. File formats vary by year — earlier years are released as .sav (SPSS), later years as .csv. Variable naming conventions also shift across years (e.g., tgaywomen → tgayleswomen starting in 2017).\n\n\n\n\nRequired Citation\nIf you use this indicator in published research, you must cite the original data source in addition to the stigmaR package:\n\nXu, K., Nosek, B., & Greenwald, A. (2014). Psychology data from the Race Implicit Association Test on the Project Implicit Demo website. Journal of Open Psychology Data, 2(1). https://doi.org/10.5334/jopd.ac",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
@@ -174,7 +174,7 @@
     "href": "02_iat_sexuality.html#access-and-download",
     "title": "2  IAT: Sexuality",
     "section": "Access and Download",
-    "text": "Access and Download\n\n\n\nFeature\nDetails\n\n\n\n\nAccess type\nBLANK (e.g., Public download, Registration required, Request)\n\n\nURL\nBLANK\n\n\nAuthentication required\nBLANK (Yes/No)\n\n\nCost\nBLANK (Free/Paid)\n\n\nLast accessed\nBLANK (Month Year)\n\n\n\n\nDownload Procedure\nBLANK: Step-by-step description of how the data was obtained. Be specific enough that someone could reproduce this in 5 years if the website changes.\n# BLANK: Download code here\n\n\n\n\n\n\nWarning\n\n\n\nBLANK: Note any known instability in access (e.g., website changes, file format shifts across years). Delete this block if not applicable.",
+    "text": "Access and Download\n\n\n\nFeature\nDetails\n\n\n\n\nAccess type\nPublic download\n\n\nURL\nOSF — Project Implicit Public Data\n\n\nAuthentication required\nNo\n\n\nCost\nFree\n\n\nLast accessed\nJanuary 2026\n\n\n\n\nDownload Procedure\nAnnual sexuality IAT datasets are available on the Project Implicit OSF page. Files are organized by year and released in .csv or .sav format.\n\nNavigate to the OSF repository linked above.\nDownload one file per year for the Sexuality IAT (2016–2025).\nPlace files in data/raw_data/iat/sexuality/, organized by year.\n\n\n\n\n\n\n\nWarning\n\n\n\n2015 data uses a different variable set — it is missing several policy items (adoptchild, serverights, transgender, marriagerights_3num, relationslegal_3num) that are required for the composite indices. 2015 is excluded from this pipeline. Pre-2015 data also differ substantially in structure and are not used.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "02_iat_sexuality.html#cleaning-procedure",
     "title": "2  IAT: Sexuality",
     "section": "Cleaning Procedure",
-    "text": "Cleaning Procedure\n\nRaw Data Structure\n\nFile format: BLANK (e.g., .csv, .xlsx, .sav)\n\nRows: BLANK (e.g., One row per state-year, One row per respondent)\n\nKey variables used: BLANK\n\n\n\nCleaning Steps\n\n1. BLANK (e.g., Variable Selection)\nBLANK: What variables were retained and why. What was excluded and why.\n# BLANK\n\n\n2. BLANK (e.g., Exclusion Criteria)\nBLANK: What cases/rows were excluded and why.\n# BLANK\n\n\n3. BLANK (e.g., Recoding / Scoring)\nBLANK: Any recoding, reverse scoring, or composite construction.\n# BLANK\n\n\n\n\n\n\nImportant\n\n\n\nBLANK: Document any judgment calls here — these are the decisions future you (or a reviewer) will ask about. Delete if not applicable.",
+    "text": "Cleaning Procedure\n\nRaw Data Structure\n\nFile format: .csv (2016+) and .sav (select years)\n\nRows: One row per respondent\n\nKey variables used: state, year, d_biep.straight_good_all, att_7, tgaymen, tgayleswomen / tgaywomen, marriagerights_3num, relationslegal_3num, adoptchild, serverights, transgender\n\n\n\nCleaning Steps\n\n1. File Loading and Year Exclusion\nAll .csv and .sav files in the raw data folder are read in and merged into a single named list. The 2015 file is excluded due to incompatible variable structure.\ncsv_files &lt;- csv_files[!grepl(\"2015\", csv_files)]\nColumn names are normalized to lowercase to handle inconsistent casing across years and file types.\nnames(df) &lt;- tolower(names(df))\n\n\n2. Variable Construction and Scoring\nNine item-level variables are constructed, each scored so that higher values = more stigma (anti-gay/lesbian attitudes).\nA helper function grab() is used throughout to safely retrieve columns that may not exist in all years — returning NA if the variable is absent rather than throwing an error.\ngrab &lt;- function(df, col) {\n  if (col %in% names(df)) df[[col]] else rep(NA_real_, nrow(df))\n}\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\niat_sex_explicit_bel (belief that sexuality is environmentally determined, from sexualityorigin) was planned but is not included — this variable does not appear in any Project Implicit sexuality dataset from 2016 onward.\n\n\n\n\n3. State Filtering\nAfter aggregation, state strings are normalized (uppercase, whitespace stripped, SPSS labels removed via haven::zap_labels()). Only the 50 U.S. states + D.C. are retained.\nmutate(state = toupper(trimws(as.character(haven::zap_labels(state))))) |&gt;\n  filter(state %in% us_states_dc)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "02_iat_sexuality.html#aggregation-to-state-level",
     "title": "2  IAT: Sexuality",
     "section": "Aggregation to State Level",
-    "text": "Aggregation to State Level\n\n\n\n\n\n\nNote\n\n\n\nThis section documents how individual-level or sub-state data was aggregated to the state level. Skip if data is already state-level.\n\n\n\nUnit of Analysis in Raw Data\nBLANK: What is the original unit of observation? (e.g., Individual respondent, County, Zip code)\n\n\nAggregation Method\n\n\n\nFeature\nDecision\nRationale\n\n\n\n\nStatistic\nBLANK (Mean/Median/Sum)\nBLANK\n\n\nMinimum n\nBLANK (e.g., n ≥ 50 per state)\nBLANK\n\n\nWeighting\nBLANK (Unweighted/Survey-weighted)\nBLANK\n\n\nMissing states\nBLANK (Excluded/Imputed)\nBLANK\n\n\n\n# BLANK: Aggregation code here\n\n\nSensitivity Checks\nBLANK: Note any alternative aggregation approaches considered and why the chosen approach was preferred. Delete if not applicable.",
+    "text": "Aggregation to State Level\n\nUnit of Analysis in Raw Data\nIndividual respondent (one row per person per year).\n\n\nAggregation Method\n\n\n\n\n\n\n\n\nFeature\nDecision\nRationale\n\n\n\n\nStatistic\nMean\nStandard for IAT D-score and Likert items aggregated to state level\n\n\nMinimum n\nNone applied at this stage\nDownstream analyses apply their own thresholds\n\n\nWeighting\nUnweighted\nProject Implicit does not provide sampling weights\n\n\nMissing states\nExcluded\nStates with no respondents in a given year produce no row\n\n\n\nFor each item, both the mean and a respondent count (iat_sex_n_{item}) are computed per state × year. The count columns are retained in the items dataset for downstream quality checks.\ngroup_by(year, state) |&gt;\n  summarise(\n    across(c(iat_sex_imp_d, ...), ~ sum(!is.na(.x)), .names = \"iat_sex_n_{sub('iat_sex_', '', .col)}\"),\n    across(c(iat_sex_imp_d, ...), ~ mean(.x, na.rm = TRUE), .names = \"{.col}\"),\n    .groups = \"drop\"\n  )",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "02_iat_sexuality.html#output-dataset",
     "title": "2  IAT: Sexuality",
     "section": "Output Dataset",
-    "text": "Output Dataset\n\nVariables in Final Output\n\n\n\nVariable\nType\nDescription\nRange\n\n\n\n\nstate\nchr\nTwo-letter state abbreviation\n—\n\n\nyear\nint\nCalendar year\nBLANK–BLANK\n\n\nBLANK\nBLANK\nBLANK\nBLANK\n\n\nBLANK\nBLANK\nBLANK\nBLANK\n\n\n\n\n\nOutput File\nsaveRDS(BLANK, here(\"data\", \"clean\", \"BLANK\", \"BLANK.rds\"))\nFile location: data/clean/BLANK/BLANK.rds\nRows: BLANK\nLast generated: BLANK (Month Year)",
+    "text": "Output Dataset\n\nVariables in Final Output\n\nItem-Level\niat_sexuality_items.Rds — item-level dataset (state × year)\n\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\nScoring\n\n\n\n\nstate\nchr\nTwo-letter state abbreviation\n—\n\n\nyear\nint\nCalendar year\n2016–2025\n\n\niat_sex_imp_d\ndbl\nImplicit D-score\nHigher = more pro-straight bias\n\n\niat_sex_exp_att\ndbl\nExplicit attitude (7-pt)\nHigher = more stigma\n\n\niat_sex_exp_therm_gm\ndbl\nThermometer: gay men (reversed)\nHigher = more stigma\n\n\niat_sex_exp_therm_gw\ndbl\nThermometer: lesbian women (reversed)\nHigher = more stigma\n\n\niat_sex_exp_pol_marr\ndbl\nPolicy: marriage equality\n0–1; higher = more stigma\n\n\niat_sex_exp_pol_legal\ndbl\nPolicy: legal recognition\n0–1; higher = more stigma\n\n\niat_sex_exp_pol_adopt\ndbl\nPolicy: adoption rights\n0–1; higher = more stigma\n\n\niat_sex_exp_pol_serv\ndbl\nPolicy: right to refuse service\n0–1; higher = more stigma\n\n\niat_sex_exp_pol_trans\ndbl\nPolicy: trans bathroom access\n0–1; higher = more stigma\n\n\niat_sex_n_{item}\nint\nRespondent count per item\n—\n\n\n\n\n\nComposite-level\niat_sexuality_indices.Rds — composite-level dataset (state × year)\n\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\nComponents\n\n\n\n\nstate\nchr\nTwo-letter state abbreviation\n—\n\n\nyear\nint\nCalendar year\n2016–2025\n\n\niat_sex_implicit\ndbl\nImplicit stigma index\niat_sex_imp_d\n\n\niat_sex_explicit_therm\ndbl\nThermometer composite\nMean of therm_gm, therm_gw\n\n\niat_sex_explicit_pol\ndbl\nPolicy composite\nMean of 5 policy items\n\n\niat_sex_explicit\ndbl\nOmnibus explicit index\nMean of all 7 explicit items\n\n\n\nComposites use rowMeans(..., na.rm = TRUE) so that state-years with partial item coverage still receive a score.\n\n\n\nOutput Files\nsaveRDS(iat_sexuality_items,   here(\"data/clean_data/iat_sexuality_items.Rds\"))\nsaveRDS(iat_sexuality_indices, here(\"data/clean_data/iat_sexuality_indices.Rds\"))\nFile locations:\n\ndata/clean_data/iat_sexuality_items.Rds\ndata/clean_data/iat_sexuality_indices.Rds",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
@@ -214,7 +214,7 @@
     "href": "02_iat_sexuality.html#known-limitations",
     "title": "2  IAT: Sexuality",
     "section": "Known Limitations",
-    "text": "Known Limitations\n\nBLANK\nBLANK",
+    "text": "Known Limitations\n\nNon-probability sample: Project Implicit data come from self-selected volunteers. State-level estimates reflect the online population visiting the site, not representative state samples.\nImplicit measure scope: The D-score measures implicit associations for gay men only. Implicit attitudes toward lesbian women, bisexual, or other sexually diverse groups are not captured.\niat_sex_explicit_bel not available: The planned belief-about-origin item (sexualityorigin) does not appear in any 2016+ dataset and is excluded.\n2015 excluded: Variable structure is incompatible with 2016+; a separate pipeline would be needed to incorporate it.\nThermometer variable rename: tgaywomen was renamed tgayleswomen starting in 2017. The pipeline handles this via coalesce() but researchers should verify continuity if comparing pre- vs. post-2017 estimates.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "02_iat_sexuality.html#references",
     "title": "2  IAT: Sexuality",
     "section": "References",
-    "text": "References\nBLANK: Full references for any papers, reports, or technical documentation from the original data collectors.",
+    "text": "References",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>IAT: Sexuality</span>"
     ]

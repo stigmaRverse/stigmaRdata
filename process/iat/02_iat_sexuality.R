@@ -13,7 +13,7 @@
 
 pacman::p_load(tidyverse, here, readr, haven)
 
-folder_path <- here("raw_data/iat/sexuality")
+folder_path <- here("data/raw_data/iat/sexuality")
 
 # ── Valid US states + DC only ─────────────────────────────────────────────────
 us_states_dc <- c(
@@ -172,8 +172,8 @@ iat_sexuality_indices <- iat_sexuality_items |>
   )
 
 # ── Save ──────────────────────────────────────────────────────────────────────
-saveRDS(iat_sexuality_items,   here("clean_data/iat_sexuality_items.Rds"))
-saveRDS(iat_sexuality_indices, here("clean_data/iat_sexuality_indices.Rds"))
+saveRDS(iat_sexuality_items,   here("data/clean_data/iat_sexuality_items.Rds"))
+saveRDS(iat_sexuality_indices, here("data/clean_data/iat_sexuality_indices.Rds"))
 
 message("02_iat_sexuality.R complete: ",
         nrow(iat_sexuality_items), " state-year rows written (2016–2025).")

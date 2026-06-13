@@ -4,6 +4,7 @@ project:
 
 book:
   title: "stigmaRdata: Data Processing Documentation"  # main page title
+  subtitle: "Version {{< var version >}}"
   author:
   - name: Seungju Kim
     orcid: 0009-0009-5166-9170
@@ -15,6 +16,8 @@ book:
     - index.qmd
     - 01_map.qmd
     - 02_iat_sexuality.qmd
+  repo-url: https://github.com/stigmaRverse/stigmaRdata
+  repo-actions: [issue, source]
 
 
 format:
@@ -22,6 +25,6 @@ format:
     number-depth: 1
     theme:
       light:
-      - flatly
+      - lumen
       dark:
       - darkly
