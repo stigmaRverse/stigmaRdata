@@ -15,12 +15,6 @@ execute:
   echo: true
 ---
 
-```{r}
-#| include: false
-pacman::p_load(DT)
-```
-
-
 ## Source Description
 
 **Full name:** Implicit Association Test - Sexuality\
@@ -125,7 +119,7 @@ grab <- function(df, col) {
 #| eval: true
 #| echo: false
 #| column: page
-library(DT)
+pacman::p_load(DT)
 
 items_dict <- data.frame(
   Variable = c(
