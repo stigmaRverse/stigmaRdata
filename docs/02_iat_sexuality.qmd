@@ -119,6 +119,7 @@ grab <- function(df, col) {
 #| eval: true
 #| echo: false
 #| column: page
+install.packages("pacman")
 pacman::p_load(DT)
 
 items_dict <- data.frame(
