@@ -134,7 +134,6 @@ What is the original unit? (e.g., individual respondent, county, zip code)
 | Feature | Decision | Rationale |
 |---------|----------|-----------|
 | Statistic | Mean / Median / Sum | Why this statistic |
-| Minimum n | e.g., n ≥ 50 per state | Why this threshold |
 | Weighting | Unweighted / survey-weighted | Why |
 | Missing states | Excluded / imputed | Why |
 ```r

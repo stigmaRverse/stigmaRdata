@@ -133,7 +133,6 @@ BLANK: What is the original unit of observation?
 | Feature | Decision | Rationale |
 |---------|----------|-----------|
 | Statistic | BLANK (Mean/Median/Sum) | BLANK |
-| Minimum n | BLANK (e.g., n ≥ 50 per state) | BLANK |
 | Weighting | BLANK (Unweighted/Survey-weighted) | BLANK |
 | Missing states | BLANK (Excluded/Imputed) | BLANK |
 ```r

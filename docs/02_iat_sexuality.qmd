@@ -222,7 +222,6 @@ Individual respondent (one row per person per year).
 | Feature | Decision | Rationale |
 |---|---|---|
 | Statistic | Mean | Standard for IAT D-score and Likert items aggregated to state level |
-| Minimum n | None applied at this stage | Downstream analyses apply their own thresholds |
 | Weighting | Unweighted | Project Implicit does not provide sampling weights |
 | Missing states | Excluded | States with no respondents in a given year produce no row |
 
